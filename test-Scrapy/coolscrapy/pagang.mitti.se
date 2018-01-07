@@ -1,0 +1,4439 @@
+
+
+<!DOCTYPE html>
+<html lang="sv-SE" class="no-js">
+<head>
+
+<link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
+
+<meta charset="UTF-8">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0; user-scalable=yes">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<link rel="apple-touch-icon-precomposed" href="http://pagang.mitti.se/wp-content/themes/pagang/images/share_logo.png"/> 
+<link rel="apple-touch-startup-image" href="http://pagang.mitti.se/wp-content/themes/pagang/images/Default.png" />
+			
+<!-- loads jquery and jquery ui -->
+<script type="text/javascript" src="http://pagang.mitti.se/wp-content/themes/pagang/kalender/js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="http://pagang.mitti.se/wp-content/themes/pagang/kalender/js/jquery-ui-1.11.1.js"></script>
+<script type="text/javascript" src="http://pagang.mitti.se/wp-content/themes/pagang/kalender/js/jquery-2.1.1.js"></script>
+<script type="text/javascript" src="http://pagang.mitti.se/wp-content/themes/pagang/kalender/js/jquery-ui-1.11.1.js"></script>
+		
+<!-- loads mdp -->
+<script type="text/javascript" src="http://pagang.mitti.se/wp-content/themes/pagang/kalender/jquery-ui.multidatespicker.js"></script>
+		
+<!-- loads some utilities (not needed for your developments) -->
+<link rel="stylesheet" type="text/css" href="http://pagang.mitti.se/wp-content/themes/pagang/kalender/css/mdp.css">
+<link rel="stylesheet" type="text/css" href="http://pagang.mitti.se/wp-content/themes/pagang/kalender/css/prettify.css">
+<script type="text/javascript" src="http://pagang.mitti.se/wp-content/themes/pagang/kalender/js/prettify.js"></script>
+<script type="text/javascript" src="http://pagang.mitti.se/wp-content/themes/pagang/kalender/js/lang-css.js"></script>
+	
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/favicomatic/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/favicomatic/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/favicomatic/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/favicomatic/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/favicomatic/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/favicomatic/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/favicomatic/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/favicomatic/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/favicomatic/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/favicomatic/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/favicomatic/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/favicomatic/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/favicomatic/favicon-128.png" sizes="128x128" />
+
+<meta name="På Gång" content="&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/favicomatic/mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/favicomatic/mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/favicomatic/mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/favicomatic/mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/favicomatic/mstile-310x310.png" />
+		
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>På Gång</title>
+<meta name='robots' content='noindex,follow' />
+<link rel="alternate" type="application/rss+xml" title="På Gång &raquo; flöde" href="http://pagang.mitti.se/feed/" />
+<link rel="alternate" type="application/rss+xml" title="På Gång &raquo; kommentarsflöde" href="http://pagang.mitti.se/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/pagang.mitti.se\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.2"}};
+			!function(a,b,c){function d(a){var c,d=b.createElement("canvas"),e=d.getContext&&d.getContext("2d"),f=String.fromCharCode;return e&&e.fillText?(e.textBaseline="top",e.font="600 32px Arial","flag"===a?(e.fillText(f(55356,56806,55356,56826),0,0),d.toDataURL().length>3e3):"diversity"===a?(e.fillText(f(55356,57221),0,0),c=e.getImageData(16,16,1,1).data.toString(),e.fillText(f(55356,57221,55356,57343),0,0),c!==e.getImageData(16,16,1,1).data.toString()):("simple"===a?e.fillText(f(55357,56835),0,0):e.fillText(f(55356,57135),0,0),0!==e.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='ajax-load-more-css'  href='http://pagang.mitti.se/wp-content/plugins/ajax-load-more/core/css/ajax-load-more.min.css?ver=4.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='searchandfilter-css'  href='http://pagang.mitti.se/wp-content/plugins/search-filter/style.css?ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='twentysixteen-fonts-css'  href='https://fonts.googleapis.com/css?family=Merriweather%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CMontserrat%3A400%2C700%7CInconsolata%3A400&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='http://pagang.mitti.se/wp-content/themes/pagang/genericons/genericons.css?ver=3.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='twentysixteen-style-css'  href='http://pagang.mitti.se/wp-content/themes/pagang/style.css?ver=4.4.2' type='text/css' media='all' />
+<!--[if lt IE 10]>
+<link rel='stylesheet' id='twentysixteen-ie-css'  href='http://pagang.mitti.se/wp-content/themes/pagang/css/ie.css?ver=20150930' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentysixteen-ie8-css'  href='http://pagang.mitti.se/wp-content/themes/pagang/css/ie8.css?ver=20151230' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='twentysixteen-ie7-css'  href='http://pagang.mitti.se/wp-content/themes/pagang/css/ie7.css?ver=20150930' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<script type='text/javascript' src='http://pagang.mitti.se/wp-content/themes/pagang/js/html5.js?ver=3.7.3'></script>
+<![endif]-->
+<script type='text/javascript' src='http://pagang.mitti.se/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='http://pagang.mitti.se/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel='https://api.w.org/' href='http://pagang.mitti.se/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://pagang.mitti.se/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://pagang.mitti.se/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.4.2" />
+</head>
+			
+<body>
+    
+<script><!-- google analytics -->
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-75007563-1', 'auto');
+  ga('send', 'pageview');
+</script><!-- google analytics -->
+
+
+<div id="page" class="site">
+	
+		<a class="skip-link screen-reader-text" href="#content">Hoppa till innehåll</a>
+
+		<header id="masthead" class="site-header" role="banner">
+		
+			<div class="site-header-main">
+				
+<div class="site-inner">
+
+		<div id="content" class="site-content">
+
+<div class="headerContainer" style="background-color:#fff; padding:0px !important; margin:0px !important;"><!-- .headerContainer -->
+            
+
+
+                   
+            <div class="logoContainer" style="padding:0px !important; margin:0px !important;"><!-- .logoContainer -->
+            <script type="text/javascript">
+if ( $(window).width() > 739) {     
+document.write('<div class="desktop" style="float:left;"><iframe src="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/pg-logo/pagang-logo.html" scrolling="no" height="150px" frameborder="0"></iframe></div><div class="tipsa desktop" style="width:150px; height:150px;"><iframe src="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/tipsa/tipsa.html" scrolling="no" frameborder="0"></iframe></div>');
+}
+else {
+document.write(' <div class="phone" style="float:left; width:220px; height:120 px !important; padding:0px !important; margin:0px !important;"><iframe src="http://pagang.mitti.se/wp-content/themes/pagang//pg-img/pg-logo/pagang-logo.html" scrolling="no" height="120px" width="220px" frameborder="0"></iframe></div><div class="tipsa phone" style="float:right; width:80px; height:80px; z-index:1;"><iframe src="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/tipsamob/tipsamobil.html" scrolling="no" frameborder="0" height="80px" width="80px"></iframe></div>');
+}
+</script>
+           
+            </div><!-- .logoContainer -->
+           
+            
+            
+</div><!-- .headerContainer -->
+	
+<link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
+<style>
+
+.phone {
+	display:none !important;
+	opacity:0.0 !important;
+}
+
+.destop {
+	display:inline-block !important;
+	opacity:1.0 !important;
+}
+
+
+p {
+	margin-bottom:14px !important;
+}
+
+.site-main {
+	margin-left:0px !important;
+}
+
+.site {
+	margin-top:0px;
+}
+
+.content-area {
+	width:980px;
+}
+
+.site-inner {
+	max-width:980px;
+	margin-top:0px !important;
+}
+
+.site-header-main {
+	margin-top:0px;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Oswald', sans-serif !important;
+	font-weight: 700;
+	text-rendering: optimizeLegibility;
+}
+
+h3 {
+	font-size:20px;
+	line-height:1.1;
+	margin-bottom:10px;
+	text-transform: uppercase;
+}
+
+h4 {
+	font-family: 'Merriweather', serif !important;
+	font-size:16px;
+	line-height:1.1;
+	margin-bottom:5px;
+	text-transform: none;
+}
+
+/** Listvy start */
+
+
+
+body {
+	background-color:#fff;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:0px;
+	
+}
+
+a {
+	color:#c00d0d  !important;
+}
+
+.totalcontainer {
+	width:980px !important;
+margin: auto;
+}
+
+.snap-content {
+	border-left:none!important;
+	padding:0px;
+}
+
+.site-content {
+	border-right:none !important;
+	height:100%;
+	width:100% !important;
+}
+
+.outsidercontainer {
+	width:0px !important;
+	padding-right: 0px !important;
+}
+
+
+/** huvud start */
+.headerContainer {
+	margin-top:0px;
+	margin-left:0px;
+	margin-bottom:0px;
+	height:140px;
+	padding-top:0px;
+	overflow:hidden;	
+}
+
+.logoContainer {
+	vertical-align:bottom !important;
+	padding-top:0px;
+	margin-bottom:0px;
+	height:160px;
+	width:300px;
+}
+
+.tipsa {
+	position:absolute;
+	top: 10px;
+	right: 80px;
+}
+
+/** huvud slut */
+
+
+/** form start */
+.formContainer {
+	margin-top:10px;
+	margin-bottom:0px;
+	padding-bottom:10px;
+	border-bottom: 1px solid #ccc;
+	width:100%;
+	background-color:#fff;
+}
+
+
+
+input[type="submit"].skicka {
+	font-size:14px;
+	height:34px;
+	background-color: #000;
+	color: #fff;
+	padding-left:35px;
+	padding-top:7px !important;
+	padding-bottom:5px !important;
+	padding-right:20px;
+	font-family: 'Oswald', sans-serif;
+	text-transform:uppercase;
+	font-weight:700;
+	background-image: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/search.svg);
+	background-repeat:no-repeat;
+}
+
+
+input[type="submit"].skicka:hover {
+	font-size:14px;
+	height:34px;
+	background-color: #666;
+	color: #fff;
+	padding-left:35px;
+	padding-top:7px !important;
+	padding-bottom:5px !important;
+	padding-right:20px;
+	font-family: 'Oswald', sans-serif;
+	text-transform:uppercase;
+	font-weight:700;
+	background-image: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/search.svg);
+	background-repeat:no-repeat;
+}
+
+
+input[type="submit"].skicka:active {
+	background-color: #c00d0d !important;
+	font-size:14px;
+	height:34px;
+	color: #fff;
+	padding-left:35px;
+	padding-top:7px !important;
+	padding-bottom:5px !important;
+	padding-right:20px;
+	font-family: 'Oswald', sans-serif;
+	text-transform:uppercase;
+	font-weight:700;
+	background-image: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/search.svg);
+	background-repeat:no-repeat;
+	
+}
+
+.tipsa2,
+input[type="submit"] {
+	font-size:14px;
+	height:34px;
+	background-color: #000;
+	color: #fff;
+	padding:5px;
+	font-family: 'Oswald', sans-serif;
+	text-transform:uppercase;
+	font-weight:700;
+	background-repeat:no-repeat;
+	border:none;
+}
+
+.tipsa2,
+input[type="submit"]:hover {
+	font-size:14px;
+	height:34px;
+	background-color: #666;
+	color: #fff;
+	padding:5px;
+	font-family: 'Oswald', sans-serif;
+	text-transform:uppercase;
+	font-weight:700;
+	background-repeat:no-repeat;
+	border:none;
+}
+
+.tipsa2,
+input[type="submit"]:active {
+	font-size:14px;
+	height:34px;
+	background-color: #c00d0d;
+	color: #fff;
+	padding:5px;
+	font-family: 'Oswald', sans-serif;
+	text-transform:uppercase;
+	font-weight:700;
+	background-repeat:no-repeat;
+	border:none;
+}
+
+
+input[type="tel"],
+input[type="email"],
+input[type="text"] {
+    width: 100%;
+    max-width:400px;
+    height:25px;
+    border:1px solid #ccc;
+    font-family: 'Merriweather', serif !important;
+}
+
+input[type="text"]:active {
+    width: 100%;
+    max-width:400px;
+    height:25px;
+    border:1px solid #ccc;
+    font-family: 'Merriweather', serif !important;
+}
+
+textarea {
+    width: 100%;
+    max-width:400px !important;
+    height:200px;
+    border:1px solid #ccc;
+    font-family: 'Merriweather', serif !important;
+}
+
+
+select {
+	-webkit-appearance: none;
+	width:auto;
+	height:34px;
+	padding:5px;
+	padding-left:10px;
+	padding-right:10px;
+	float: left;
+	font-size: 14px;
+	margin-right:0px;
+	border:1px solid #ccc !important;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	font-family: 'Oswald', sans-serif;
+	text-transform:uppercase;
+	font-weight:100;
+	background-color:#fff;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/arrow5.svg) no-repeat right #fff;
+	background-size: 12px 12px;
+	background-position: 92% 50%; 
+	-moz-appearance:none;
+    text-align:left;
+}
+
+
+select, 
+.location {
+	-webkit-appearance: none;
+	width:auto;
+	height:34px;
+	padding:5px;
+	padding-left:10px;
+	padding-right:10px;
+	float: left;
+	font-size: 14px;
+	margin-right:20px;
+	border:1px solid #ccc !important;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	font-family: 'Oswald', sans-serif;
+	text-transform:uppercase;
+	font-weight:100;
+	background-color:#fff;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/arrow5.svg) no-repeat right #fff;
+	background-size: 12px 12px;
+	background-position: 92% 50%; 
+	-moz-appearance:none;
+	text-align:left;
+    
+}
+
+select, 
+.event {
+	-webkit-appearance: none;
+	width:auto;
+	height:34px;
+	padding:5px;
+	padding-left:10px;
+	padding-right:10px;
+	float: left;
+	font-size: 14px;
+	margin-right:20px;
+	border:1px solid #ccc !important;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	font-family: 'Oswald', sans-serif;
+	text-transform:uppercase;
+	font-weight:100;
+	background-color:#fff;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/arrow5.svg) no-repeat right #fff;
+	background-size: 12px 12px;
+	background-position: 92% 50%; 
+	-moz-appearance:none;
+	text-align:left;
+	
+}
+
+
+.required {
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/asterix.svg) no-repeat #f7f7f7 right !important;
+	background-size: 8px 8px !important;
+	background-position: 98% 10px !important; 
+}
+.required:focus {
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/asterix.svg) no-repeat #fff right !important;
+	background-size: 8px 8px !important;
+	background-position: 98% 10px !important; 
+}
+
+
+.wwwsida {
+	padding-left:35px !important;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/socialaIkoner/www_round.svg) no-repeat #f7f7f7 right !important;
+	background-size: 20px 20px !important;
+	background-position: 8px 50% !important; 
+}
+
+.wwwsida:focus {
+	padding-left:35px !important;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/socialaIkoner/www_round.svg) no-repeat #fff right !important;
+	background-size: 20px 20px !important;
+	background-position: 8px 50% !important; 
+}
+
+.telefon {
+	padding-left:35px !important;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/phone.svg) no-repeat #f7f7f7 right !important;
+	background-size: 20px 20px !important;
+	background-position: 8px 50% !important; 
+}
+
+.telefon:focus {
+	padding-left:35px !important;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/phone.svg) no-repeat #fff right !important;
+	background-size: 20px 20px !important;
+	background-position: 8px 50% !important; 
+}
+
+
+.epost {
+	padding-left:35px !important;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/mail.svg) no-repeat #f7f7f7 right !important;
+	background-size: 20px 20px !important;
+	background-position: 8px 50% !important; 
+}
+
+.epost:focus {
+	padding-left:35px !important;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/mail.svg) no-repeat #fff right !important;
+	background-size: 20px 20px !important;
+	background-position: 8px 50% !important; 
+}
+
+
+
+
+
+
+
+
+
+
+
+.facebooksida {
+	padding-left:35px !important;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/socialaIkoner/facebook_round.svg) no-repeat #f7f7f7 right !important;
+	background-size: 20px 20px !important;
+	background-position: 8px 50% !important; 
+}
+
+.facebooksida:focus {
+	padding-left:35px !important;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/socialaIkoner/facebook_round.svg) no-repeat #fff right !important;
+	background-size: 20px 20px !important;
+	background-position: 8px 50% !important; 
+}
+
+
+.twitterkonto {
+	padding-left:35px !important;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/socialaIkoner/twitter_round.svg) no-repeat #f7f7f7 right !important;
+	background-size: 20px 20px !important;
+	background-position: 8px 50% !important; 
+}
+
+.twitterkonto:focus {
+	padding-left:35px !important;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/socialaIkoner/twitter_round.svg) no-repeat #fff right !important;
+	background-size: 20px 20px !important;
+	background-position: 8px 50% !important; 
+}
+
+
+.instagramkonto {
+	padding-left:35px !important;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/socialaIkoner/instagram_round.svg) no-repeat #f7f7f7 right !important;
+	background-size: 20px 20px !important;
+	background-position: 8px 50% !important; 
+}
+
+.instagramkonto:focus {
+	padding-left:35px !important;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/socialaIkoner/instagram_round.svg) no-repeat #fff right !important;
+	background-size: 20px 20px !important;
+	background-position: 8px 50% !important; 
+}
+
+
+
+
+/** form slut */
+
+
+/** Listningen start **/
+
+.mainContainer {
+	background-color:#fff;
+	width:100%; 
+	float:left; 
+	padding-right:0px;
+}
+
+.mainContainerEmbed {
+	background-color:#fff;
+	float:left; 
+	padding:10px;
+	border:1px solid #ccc; 
+	width:100%; 
+	max-width:620px;
+}
+
+.contentContainer {
+	color:#000 !important;
+	background-color:#fff !important;
+	padding: 0px 0px 10px 0px;
+	margin-top:0px;
+	margin-bottom:5px;
+	border-bottom: 1px solid #ccc; 
+	height:auto; 
+	float:none; 
+	overflow:hidden;
+	position:relative; 
+	/**top:-20px !important; **/
+}
+
+.contentContainer a {
+	color:#000 !important;
+	text-decoration:none !important;
+	
+}
+    
+.contentContainer:hover {
+
+ }
+
+.contentContainerSingle {
+	color:#000 !important;
+	background-color:#fff !important;
+	padding: 0px 0px 10px 0px;
+	margin-top:0px;
+	margin-bottom:10px;
+	border-bottom: 1px solid #ccc; 
+	height:auto; 
+	float:none; 
+	overflow:hidden;
+	
+}
+
+.contentContainerSingleEmbed {
+	color:#000 !important;
+	background-color:#fff !important;
+	padding: 0px 0px 0px 0px;
+	margin-top:0px;
+	margin-bottom:0px;
+	height:auto; 
+	float:none; 
+	overflow:hidden;
+	
+}
+
+
+.contentContainerSingle:hover {
+
+}
+
+
+
+	
+.innerContentContainer {
+	width: 100%; 
+	margin-top:5px; 
+	margin-bottom:0px; 
+	padding-right:0px; 
+	height:100%; 
+	background-color:#fff;
+}
+	
+.thumbnailContainer {
+	display: inline-block;
+	background-position: center !important; 
+    width:267px;
+    height:180px !important;
+	max-height:180px;
+	overflow:hidden !important;
+	vertical-align: middle;
+	margin-bottom:0px;
+	margin-right:20px;
+	float:left;
+	clear:none;
+}
+
+.thumbnailContainer980 {
+	display: inline-block;
+	background-position: center !important; 
+    width:356px;
+    height:240px !important;
+	max-height:240px;
+	overflow:hidden !important;
+	vertical-align: middle;
+	margin-bottom:0px;
+	margin-right:0px;
+	float:left;
+	clear:none;
+}
+
+.thumbnail {
+    no-repeat; !important; 
+	color:#fff; 
+	background-size: cover !important;
+    background-position: center !important; 
+	height:100%;
+}
+
+.thumbnailSidebarContainer {
+	display: inline-block;
+	background-position: center !important; 
+    width:128px;
+    height:72px !important;
+	max-height:72px;
+	overflow:hidden !important;
+	vertical-align: middle;
+	margin-right:10px;
+	float:left;
+	clear:none;
+}
+
+.thumbnailContainerMap {
+	display: inline-block;
+	background-position: center !important; 
+    width:100%;
+    height:180px !important;
+	max-height:180px;
+	overflow:hidden !important;
+	vertical-align: middle;
+	margin-bottom:10px;
+	float:left;
+	clear:none;
+}
+
+.thumbnailMap {
+    no-repeat; !important; 
+	color:#fff; 
+	background-size: cover !important;
+    background-position: center !important; 
+	height:100%;
+}
+
+
+.eventType {
+	display:inline-block;
+    font-family: Oswald; 
+    font-size:11px; 
+    text-transform:uppercase; 
+    padding:0px; 
+    height:15px; 
+    background-color:#000 !important; 
+    position:relative;
+    top:0px; 
+    left:0px;
+    padding-top:2px;
+	padding-left:5px;
+	padding-right:5px;
+	padding-bottom:17px;
+    color:#fff;
+}
+
+.eventType980 {
+	display:inline-block;
+    font-family: Oswald; 
+    font-size:11px; 
+    text-transform:uppercase; 
+    padding:0px; 
+    height:15px; 
+    background-color:#000 !important; 
+    position:relative;
+    top:0px; 
+    left:0px;
+    padding-top:3px;
+	padding-left:5px;
+	padding-right:5px;
+	padding-bottom:2px;
+    color:#fff;
+}
+
+.listText {
+	width:480px;
+	float:left;
+	line-height:1.1;
+}
+
+.listText980 {
+	width:580px;
+	float:left;
+	line-height:1.1;
+	margin-top:20px;
+	margin-left:20px;
+	margin-right:20px;
+}
+
+.listText980 a {
+	font-family: 'Merriweather', serif;
+	color:#000 !important;
+	text-decoration:none !important;
+}
+
+.listTextSingle {
+	font-size:14px;
+	width:100%;
+	float:left;
+	line-height:1.5;
+}
+
+.listTextSingleEmbed {
+	font-size:14px;
+	width:100%;
+	float:left;
+	line-height:1.5;
+}
+
+a, .listText {
+	font-family: 'Merriweather', serif;
+}
+
+.listTitle {
+	font-family: 'Oswald', sans-serif;
+	font-size:24px;
+	text-transform:none;
+	font-weight:700;
+	margin-top:0px;
+	margin-bottom:10px;
+	position:relative;
+	top:0px;
+}
+
+.listTitle980 {
+	font-family: 'Oswald', sans-serif;
+	font-size:30px;
+	text-transform:none;
+	font-weight:700;
+	margin-top:0px;
+	margin-bottom:10px;
+	position:relative;
+	top:0px;
+}
+
+.listLocationDate {
+	font-family: 'Oswald', sans-serif;
+	font-weight:200;
+	font-size:15px;
+	text-transform:uppercase;
+	margin-top:0px;
+	margin-bottom:6px;
+	line-height: 1.3;
+}
+	
+.featuredHeader {
+	font-family: 'Oswald', sans-serif;
+	font-weight:700;
+	font-size:38px;
+	line-height:1.1;
+	text-transform:uppercase;
+	margin-top:40px;
+	margin-bottom:10px;
+}	
+
+.featuredEvent {
+	position:relative;
+	height: 200px;
+  	width: 324px;
+  	overflow: hidden;
+  	float:left;
+  	background-color:#000;
+  	margin:1px;
+  	text-align:center;
+}
+
+.featuredImg {
+	no-repeat; !important; 
+	color:#fff; 
+	background-size: cover !important;
+    background-position: center !important; 
+	height:100%;
+  }
+  
+  .featuredImg:hover {
+    zoom: 105%;
+  }
+
+.featuredTextContainer {
+	width:100%;
+	padding-top:50px;
+	padding-bottom:10px;
+	padding-left:20px;
+	padding-right:20px;
+	position:absolute;
+	bottom:0px;	
+	background: black; /* For browsers that do not support gradients */
+ 	background: -webkit-linear-gradient(bottom,rgba(0,0,0,0),rgba(0,0,0,10)); /*Safari 5.1-6*/
+ 	background: -o-linear-gradient(bottom,rgba(0,0,0,0),rgba(0,0,0,10)); /*Opera 11.1-12*/
+  	background: -moz-linear-gradient(bottom,rgba(0,0,0,0),rgba(0,0,0,10)); /*Fx 3.6-15*/
+	background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,10)); /*Standard*/
+}
+
+
+
+.featuredTitle {
+	font-family: 'Oswald', sans-serif;
+	font-weight:700;
+	font-size:20px;
+	line-height:1.1;
+	text-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+	text-transform: uppercase;
+}
+
+
+.featuredText {
+	font-family: 'Merriweather', serif;
+	font-weight:900;
+	font-size:12px;
+	color:#fff;	
+}
+    
+.featuredEventType {
+	display:inline-block;
+    font-family: Oswald; 
+    font-size:12px; 
+    text-transform:uppercase; 
+    padding:0px; 
+    height:15px; 
+    background-color:#000 !important; 
+    position:absolute; 
+    top:0px; 
+    left:0px;
+    padding-left:5px; 
+    padding-right:5px; 
+    padding-top:2px; 
+    padding-bottom:18px;
+}
+
+.listEventType {
+	display:inline-block;
+    font-family: Oswald; 
+    font-size:12px; 
+    text-transform:uppercase; 
+    padding:0px; 
+    height:20px;
+    width:auto;
+    background-color:#000 !important; 
+    position:relative; 
+    top:0px; 
+    padding-left:5px; 
+    padding-right:5px; 
+    padding-top:2px; 
+    padding-bottom:3px;
+    line-height:1.5;
+}
+    
+ 
+.featuredImg:hover, 
+.featuredEventType {
+     background-color:#000 !important;
+     opacity: 1;
+  } 
+  
+.listDate {
+  	font-family: 'Oswald', sans-serif;
+  	font-size:20px;
+  	font-weight:900;
+  	color:#d7713d;
+  	text-transform:uppercase;
+  	padding:0px;
+  	margin-top:30px;
+  	margin-bottom:10px;
+	width:100%;
+	/** border-bottom: 1px solid #ccc; **/
+  }
+    
+    
+/** Listningen slut **/
+
+
+/** Sidebar **/
+
+.sidebar {
+	float:left; 
+	width:320px; 
+	background-color:#fff;
+	padding-left:0px;
+	margin-left:0;
+	padding-left:10px;
+}
+
+
+.sidebarHeadlines{
+	font-family: 'Oswald', sans-serif;
+	font-size:20px;
+	color:#d7713d;
+	text-transform:uppercase;
+	margin-top:0px;
+	margin-bottom:5px;
+}
+
+.sidebarList{
+	font-family: 'Merriweather', serif;
+	font-size:12px;
+}
+
+/** Sidebar slut **/
+
+
+
+
+
+
+/** Widget **/
+.widget {
+	width: 300px;
+	margin:0px;
+	border-bottom:1px solid #ccc !important;
+	padding-bottom:10px;
+	margin-bottom:10px;
+	margin-left:10px;
+}
+
+.widget_search {
+	border-top:none !important;
+	border:none !important;
+}
+
+/** Widget slut **/
+
+
+/** Artikelvy start **/
+
+
+.articleContainer {
+	width:980px;
+	margin-top:24px;
+	margin-left:50px;
+	margin-rigth:20px;
+	padding-right:20px;
+}
+
+.contentSingle {
+	width:100%:
+	background-color:#000;
+	height:auto;
+}
+
+.single-title {
+	font-family: 'Oswald', sans-serif;
+	font-weight:700;
+	font-size:30px;
+	color:#000 !important;
+	line-height:1.1;
+	margin-top:10px !important;
+	margin-bottom:15px !important;
+}
+
+.theText {
+	float:none;
+	margin-top:0px;
+	font-size:14px;
+	line-height:1.45 !important;
+	width:100%;
+}
+
+
+/** Article **/
+
+.entry-header {
+	width:100%;
+	max-width:1168px !important;
+	margin-top:0px !important;
+}
+
+.single-content {
+	width:650px;
+	height:auto !important;
+	padding-bottom:0px !important;
+	background-color:#fff;
+    padding-right:10px;
+    float: left; 
+    margin-bottom:0px; 
+    border-right: 1px solid #ccc;
+}
+
+.single-contentEmbed {
+	width:100%;
+	height:auto !important;
+	padding-bottom:0px !important;
+	background-color:#fff;
+    float: left; 
+    margin-bottom:0px; 
+}
+
+.singleImage {
+	width:100%;
+	max-width:100% !important;
+	height:auto;
+	margin-bottom:10px;
+	-webkit-filter: grayscale(0%)!important;
+ 	filter: grayscale(0%)!important;
+}
+
+
+
+
+
+/** Footer **/
+.pagangFooter {
+	position:relative;
+	bottom:0px;
+	background-color:#000 !important;
+	float:none;
+	width:100%;
+	min-height:300px;
+	margin-top:20px;
+	max-height:1000px;
+	padding-top:50px;
+	font-family: 'Merriweather', serif;
+	font-size:14px;
+	background-image: url(http://ev.mitti.se/wp-content/themes/pagang/pg-img/Mitti_silhuett.svg);
+	no-repeat; !important; 
+	background-size: cover !important;
+    background-position: center !important; 
+}
+/** Footer slut **/
+
+
+
+
+
+
+
+
+/* In this example, this is the main item being resized */
+.Image_Wrapper{
+    /* to get the fade in effect, set opacity to 0 on the first element within the gallery area */
+}
+
+
+.Caption{
+    font-size:14px;
+    font-weight:normal;
+    font-family:arial;
+}
+.Caption_Content{
+    /* padding:10px; */
+    color:#FFF;
+    padding:20px;
+}
+
+/* instagram boxes */
+
+
+/* Image Box Style */
+
+
+/* Caption Common Style */
+.Image_Wrapper .caption {
+	background-color: rgba(0,0,0,0.8);
+	position: absolute;
+	color: #fff;
+	z-index: 100;
+		-webkit-transition: all 300ms ease-out;
+		-moz-transition: all 300ms ease-out;
+		-o-transition: all 300ms ease-out;
+		-ms-transition: all 300ms ease-out;	
+		transition: all 300ms ease-out;
+	left: 0;
+}
+
+
+/** Caption 1: Simple **/
+.Image_Wrapper .simple-caption {
+	padding: 10px;
+	width: 100%;
+	display: block;
+}
+
+
+/** Simple Caption :hover Behaviour **/
+.Image_Wrapper:hover .simple-caption {
+	-moz-transform: translateY(-100%);
+	-o-transform: translateY(-100%);
+	-webkit-transform: translateY(-100%);
+	opacity: 1;
+	transform: translateY(-100%);
+}
+
+/** Artikelvy slut */
+
+
+#wpadminbar {
+	top:0px !important;
+}
+
+
+
+/** Google maps start **/
+
+#map {
+        height: 400px;
+}
+      
+.controls {
+        margin-top: 10px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        height: 32px !important;
+        outline: none;
+        margin-bottom:20px;
+}
+
+
+.pac-container {
+
+}
+
+#type-selector {
+        color: #fff;
+        background-color: #4d90fe;
+        padding: 5px 11px 0px 11px;
+}
+
+#type-selector label {
+	font-size: 13px;
+	font-weight: 300;
+}
+
+/** Google maps slut **/
+
+
+iframe.noScrolling{
+	overflow: hidden;
+	position:relative; 
+	top:-8px; 
+	left:-4px;
+	margin-top:10px;
+}
+
+
+
+
+
+/** Statistiksidan **/
+
+.latestIMGContainer {
+	width:100%;
+}
+
+.latestIMG {
+	no-repeat; !important; 
+	color:#fff; 
+	background-size: cover !important;
+    background-position: center !important; 
+	min-width:20%;
+	max-width:40%;
+	min-height:200px;
+	max-height:40%;
+	float:left;
+}
+
+
+/* 14.0 */
+
+/* Mobil */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width:  640px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait)
+  {
+
+body {
+	margin:10px;
+}
+
+.phone {
+	display:block !important;
+	opacity:1.0 !important;
+}
+
+.desktop {
+	display:none !important;
+	opacity:0.0 !important;
+	height:0px;
+}
+
+.site-main {
+	width:100% !important;
+	max-width:100% !important;
+	margin:10px;
+}
+
+.site {
+	max-width:100%;
+	width:100%;
+	margin-top:0px;
+	min-height:1vh;
+}
+
+.site-content {
+	margin-top:20px;
+}
+
+.content-area {
+	max-width:100%;
+	width:100%;
+}
+
+.site-inner {
+	max-width:100%;
+	width:100%;
+	margin-top:0px !important;
+}
+
+.site-header-main {
+	max-width:100%;
+	width:100%;
+}
+
+.contentContainer {
+	color:#000 !important;
+	background-color:#fff !important;
+	padding: 0px 0px 10px 0px;
+	margin-top:0px;
+	margin-bottom:5px;
+	border-bottom: 1px solid #ccc; 
+	height:auto; 
+	float:none; 
+	overflow:hidden;
+	position:relative; 
+	top:0px !important;
+	float:left;
+}
+
+.articleContainer {
+	max-width:100%;
+	width:100%;
+	margin-top:24px;
+	margin-left:0px;
+	margin-rigth:0px ;
+	padding-right:0px;
+}
+
+.content-area {
+	max-width:100%;
+	width:100%;
+}
+
+#primary {
+	margin:0px;
+}
+
+.mainContainer {
+	background-color:#fff;
+	width:100% !important;
+	border-right:none !important;
+	padding-right:0px !important;
+	margin-right:0px !important;
+}
+
+.headerContainer {
+	max-width:100%;
+	width:100%;
+	margin-top:0px;
+	height:100px;
+	padding:0 !important;
+	margin-bottom:0px !important;
+	padding-bottom:0px;
+
+}
+
+.logoContainer {
+	margin-bottom:0px !important;
+	height:50px !important;
+	max-width:100%;
+	width:100%;
+	position:relative;
+	top:-0px;
+
+}
+
+.tipsa {
+	position:absolute;
+	width:50px;
+	height:50px;
+	top: 0px;
+	right: 0px;
+}
+
+.contentContainer {
+	max-width:100%;
+	width:100%;
+    margin-top:0px !important;
+}
+
+.totalcontainer {
+	max-width:100%;
+	width:100%;
+}
+
+.contentContainerSingle {
+	color:#000 !important;
+	background-color:#fff !important;
+	padding: 0px 0px 10px 0px;
+	margin-top:0px;
+	margin-bottom:10px;
+	border-bottom: 1px solid #ccc; 
+	height:auto; 
+	float:none; 
+	overflow:hidden;
+
+}
+
+.innerContentContainer {
+	width: 100%; 
+	margin-top:5px; 
+	margin-bottom:0px; 
+	height:100%; 
+	background-color:#fff;
+	padding-right:0px; 
+}
+
+.innerContentContainer980 {
+	width: 100%; 
+	margin-top:0px; 
+	margin-bottom:0px; 
+	height:100%; 
+	background-color:#fff;
+	padding-right:0px; 
+}
+
+.thumbnailContainer {
+	display: inline-block;
+	background-position: center !important; 
+    width:100% !important;
+    height:191px !important;
+	max-height:191px;
+	overflow:hidden !important;
+	vertical-align: middle;
+	margin-bottom:10px;
+}
+
+.thumbnail {
+    no-repeat; !important; 
+	color:#fff; 
+	background-size: cover !important;
+    background-position: center !important; 
+	height:100%;
+}
+      
+.single-content {
+   	width:100%;
+    padding-right:0px;
+	height:auto !important;
+	padding-bottom:0px !important;
+	background-color:#fff;
+    padding-right:0px;
+    float: left; 
+    margin-bottom:0px; 
+    border-right: none;
+    margin-top:20px;
+}
+
+.eventType {
+    font-family: Oswald; 
+    font-size:11px; 
+    text-transform:uppercase; 
+    padding:0px; 
+    height:15px; 
+    background-color:#000 !important; 
+    position:relative;
+    top:0px; 
+    left:0px;
+    padding-top:3px;
+	padding-left:5px;
+	padding-right:5px;
+	padding-bottom:15px;
+    color:#fff;
+    line-height:1.3 !important;
+}
+
+.listTitle {
+	font-family: 'Oswald', sans-serif;
+	font-size:24px;
+	text-transform:none;
+	font-weight:700;
+	margin-top:0px !important;
+	line-height:1.1;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+.listText {
+	width:100%;
+	float:left;
+	line-height:1.1;
+}
+
+a, .listText {
+	font-family: 'Merriweather', serif;
+	line-height:1.4;
+}
+
+.listTextSingle {
+	font-size:16px;
+	width:100%;
+	float:left;
+	line-height:1.5;
+}
+
+.listTextSingleEmbed {
+	font-size:16px;
+	width:320px;
+	float:left;
+	line-height:1.5;
+}
+
+.theText {
+	float:none;
+	margin-top:5px;
+	font-size:15px;
+	line-height:1.4 !important;
+}
+
+.listLocationDate {
+	font-size:16px;
+	margin-top:10px;
+	margin-bottom:0px !important;
+}
+
+.categories {
+	font-family: 'Oswald', sans-serif !important;
+	font-weight: 100; 
+	font-size:18px; 
+	text-rendering: optimizeLegibility; 
+	text-transform:uppercase; 
+	color:#999;
+	margin-top:16px;
+	letter-spacing:-1px;
+}
+
+/** form start */
+.formContainer {
+	float:none;
+	clear:both;
+	margin-bottom:0px;
+	padding-bottom:0px;
+	border-bottom: 1px solid #ccc;
+	width:100%;
+	background-color:#fff;
+	padding-top:0px;
+	margin-top:10px !important;
+}
+
+input[type="submit"].skicka{
+	background-color: #000;
+	width:100%;
+	font-size:18px;
+	height:50px;
+	color: #fff;
+	padding-left:10px;
+	padding-top:8px !important;
+	padding-bottom:5px !important;
+	font-family: 'Oswald', sans-serif !important;
+	text-transform:uppercase;
+	font-weight:700;
+	background-image: url(http://apptest.mitti.se/wp-content/themes/mitti14-smal/images/search.svg);
+	background-size:40px;
+	background-repeat:no-repeat;
+	background-position:95% 50%;
+	text-align:left;
+
+}
+
+input[type="submit"]:hover.skicka {
+	background-color: #666 !important;
+	width:100%;
+	font-size:18px;
+	height:50px;
+	color: #fff;
+	padding-left:10px;
+	padding-top:8px !important;
+	padding-bottom:5px !important;
+	font-family: 'Oswald', sans-serif !important;
+	text-transform:uppercase;
+	font-weight:700;
+	background-image: url(http://apptest.mitti.se/wp-content/themes/mitti14-smal/images/search.svg);
+	background-size:40px;
+	background-repeat:no-repeat;
+	background-position:95% 50%;
+	text-align:left;
+}
+
+input[type="submit"]:active.skicka {
+	background-color: #c00d0d !important;
+	width:100%;
+	font-size:18px;
+	height:50px;
+	color: #fff;
+	padding-left:10px;
+	padding-top:8px !important;
+	padding-bottom:5px !important;
+	font-family: 'Oswald', sans-serif !important;
+	text-transform:uppercase;
+	font-weight:700;
+	background-image: url(http://apptest.mitti.se/wp-content/themes/mitti14-smal/images/search.svg);
+	background-size:40px;
+	background-repeat:no-repeat;
+	background-position:95% 50%;
+	text-align:left;
+}
+
+.tipsa2,
+input[type="submit"] {
+	font-size:16px;
+	height:50px;
+	width:100%;
+	background-color: #000;
+	color: #fff;
+	padding:5px;
+	font-family: 'Oswald', sans-serif;
+	text-transform:uppercase;
+	font-weight:700;
+	background-repeat:no-repeat;
+	border:none;
+}
+
+.tipsa2,
+input[type="submit"]:hover {
+	font-size:16px;
+	height:50px;
+	width:100%;
+	background-color: #666;
+	color: #fff;
+	padding:5px;
+	font-family: 'Oswald', sans-serif;
+	text-transform:uppercase;
+	font-weight:700;
+	background-repeat:no-repeat;
+	border:none;
+}
+
+.tipsa2,
+input[type="submit"]:active {
+	font-size:16px;
+	height:50px;
+	width:100%;
+	background-color: #c00d0d;
+	color: #fff;
+	padding:5px;
+	font-family: 'Oswald', sans-serif;
+	text-transform:uppercase;
+	font-weight:700;
+	background-repeat:no-repeat;
+	border:none;
+}
+
+
+select, 
+.location {
+	-webkit-appearance: none;
+	width:100%;
+	height:50px;
+	padding:5px;
+	padding-left:10px;
+	padding-right:10px;
+	float: left;
+	font-size: 18px;
+	margin-right:0px;
+	border:1px solid #ccc !important;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	font-family: 'Oswald', sans-serif !important;
+	text-transform:uppercase;
+	font-weight:100;
+	background-color:#fff;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/arrow5.svg) no-repeat right #fff;
+	background-size: 20px 20px;
+	background-position: 95% 50%; 
+	-moz-appearance:none;
+	margin-bottom:10px;
+	margin-top:0px;
+	z-index:999;
+}
+
+select, 
+.event {
+	-webkit-appearance: none;
+	width:100%;
+	height:50px;
+	padding:5px;
+	padding-left:10px;
+	padding-right:10px;
+	float: left;
+	font-size: 18px;
+	margin-right:0px;
+	border:1px solid #ccc !important;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	font-family: 'Oswald', sans-serif !important;
+	text-transform:uppercase;
+	font-weight:100;
+	background-color:#fff;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/arrow5.svg) no-repeat right #fff;
+	background-size: 20px 20px;
+	background-position: 95% 50%; 
+	-moz-appearance:none;
+	margin-bottom:10px;
+	margin-top:0px;
+	z-index:999;
+}
+
+/** form slut */
+
+
+/** Sidebar **/
+
+.sidebar {
+	float:left; 
+	width:100%; 
+	background-color:#fff;
+	padding:0px;
+	margin:0;
+}
+
+
+.sidebarHeadlines{
+	font-family: 'Oswald', sans-serif;
+	font-size:20px;
+	color:#d7713d;
+	text-transform:uppercase;
+	margin-top:0px;
+	margin-bottom:5px;
+}
+
+.sidebarList{
+	font-family: 'Merriweather', serif;
+	font-size:12px;
+}
+
+/** Sidebar slut **/
+
+
+/** Widget **/
+.widget {
+	width: 100%;
+	margin:0px;
+	border-bottom:1px solid #ccc !important;
+	padding-bottom:10px;
+	margin-bottom:10px;
+	margin-left:0px;
+}
+
+.widget_search {
+	border-top:none !important;
+	border:none !important;
+}
+
+/** Widget slut **/
+
+/** Footer **/
+.pagangFooter {
+	width:100%;
+	height:300px;
+	margin-top:10px;
+	margin-left:0px !important;
+	margin-right:0px !important;
+	padding-top:30px;
+	text-align:center;
+	font-family: 'Merriweather', serif;
+	font-size:13px;
+	margin-left:0px;
+	margin-right:0px;
+	position:relative;
+	overflow:hidden;
+}
+/** Footer slut **/
+
+
+
+/** Google maps start **/
+
+#map {
+        height: 200px;
+        width:90%;
+}
+      
+.controls {
+        margin-top: 0px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        height: 32px !important;
+        outline: none;
+        margin-bottom:10px;
+}
+
+
+.pac-container {
+
+}
+
+
+/** Google maps slut **/
+
+
+</style>
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		<? wp_head()?>
+<? wp_footer(); ?>
+
+<script src="http://pagang.mitti.se/wp-content/themes/pagang/js/jquery-1.7.2.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
+<style>
+
+.phone {
+	display:none !important;
+	opacity:0.0 !important;
+}
+
+.destop {
+	display:inline-block !important;
+	opacity:1.0 !important;
+}
+
+
+p {
+	margin-bottom:14px !important;
+}
+
+.site-main {
+	margin-left:0px !important;
+}
+
+.site {
+	margin-top:0px;
+}
+
+.content-area {
+	width:980px;
+}
+
+.site-inner {
+	max-width:980px;
+	margin-top:0px !important;
+}
+
+.site-header-main {
+	margin-top:0px;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Oswald', sans-serif !important;
+	font-weight: 700;
+	text-rendering: optimizeLegibility;
+}
+
+h3 {
+	font-size:20px;
+	line-height:1.1;
+	margin-bottom:10px;
+	text-transform: uppercase;
+}
+
+h4 {
+	font-family: 'Merriweather', serif !important;
+	font-size:16px;
+	line-height:1.1;
+	margin-bottom:5px;
+	text-transform: none;
+}
+
+/** Listvy start */
+
+
+
+body {
+	background-color:#fff;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:0px;
+	
+}
+
+a {
+	color:#c00d0d  !important;
+}
+
+.totalcontainer {
+	width:980px !important;
+margin: auto;
+}
+
+.snap-content {
+	border-left:none!important;
+	padding:0px;
+}
+
+.site-content {
+	border-right:none !important;
+	height:100%;
+	width:100% !important;
+}
+
+.outsidercontainer {
+	width:0px !important;
+	padding-right: 0px !important;
+}
+
+
+/** huvud start */
+.headerContainer {
+	margin-top:0px;
+	margin-left:0px;
+	margin-bottom:0px;
+	height:140px;
+	padding-top:0px;
+	overflow:hidden;	
+}
+
+.logoContainer {
+	vertical-align:bottom !important;
+	padding-top:0px;
+	margin-bottom:0px;
+	height:160px;
+	width:300px;
+}
+
+.tipsa {
+	position:absolute;
+	top: 10px;
+	right: 80px;
+}
+
+/** huvud slut */
+
+
+/** form start */
+.formContainer {
+	margin-top:10px;
+	margin-bottom:0px;
+	padding-bottom:10px;
+	border-bottom: 1px solid #ccc;
+	width:100%;
+	background-color:#fff;
+}
+
+
+
+input[type="submit"].skicka {
+	font-size:14px;
+	height:34px;
+	background-color: #000;
+	color: #fff;
+	padding-left:35px;
+	padding-top:7px !important;
+	padding-bottom:5px !important;
+	padding-right:20px;
+	font-family: 'Oswald', sans-serif;
+	text-transform:uppercase;
+	font-weight:700;
+	background-image: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/search.svg);
+	background-repeat:no-repeat;
+}
+
+
+input[type="submit"].skicka:hover {
+	font-size:14px;
+	height:34px;
+	background-color: #666;
+	color: #fff;
+	padding-left:35px;
+	padding-top:7px !important;
+	padding-bottom:5px !important;
+	padding-right:20px;
+	font-family: 'Oswald', sans-serif;
+	text-transform:uppercase;
+	font-weight:700;
+	background-image: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/search.svg);
+	background-repeat:no-repeat;
+}
+
+
+input[type="submit"].skicka:active {
+	background-color: #c00d0d !important;
+	font-size:14px;
+	height:34px;
+	color: #fff;
+	padding-left:35px;
+	padding-top:7px !important;
+	padding-bottom:5px !important;
+	padding-right:20px;
+	font-family: 'Oswald', sans-serif;
+	text-transform:uppercase;
+	font-weight:700;
+	background-image: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/search.svg);
+	background-repeat:no-repeat;
+	
+}
+
+.tipsa2,
+input[type="submit"] {
+	font-size:14px;
+	height:34px;
+	background-color: #000;
+	color: #fff;
+	padding:5px;
+	font-family: 'Oswald', sans-serif;
+	text-transform:uppercase;
+	font-weight:700;
+	background-repeat:no-repeat;
+	border:none;
+}
+
+.tipsa2,
+input[type="submit"]:hover {
+	font-size:14px;
+	height:34px;
+	background-color: #666;
+	color: #fff;
+	padding:5px;
+	font-family: 'Oswald', sans-serif;
+	text-transform:uppercase;
+	font-weight:700;
+	background-repeat:no-repeat;
+	border:none;
+}
+
+.tipsa2,
+input[type="submit"]:active {
+	font-size:14px;
+	height:34px;
+	background-color: #c00d0d;
+	color: #fff;
+	padding:5px;
+	font-family: 'Oswald', sans-serif;
+	text-transform:uppercase;
+	font-weight:700;
+	background-repeat:no-repeat;
+	border:none;
+}
+
+
+input[type="tel"],
+input[type="email"],
+input[type="text"] {
+    width: 100%;
+    max-width:400px;
+    height:25px;
+    border:1px solid #ccc;
+    font-family: 'Merriweather', serif !important;
+}
+
+input[type="text"]:active {
+    width: 100%;
+    max-width:400px;
+    height:25px;
+    border:1px solid #ccc;
+    font-family: 'Merriweather', serif !important;
+}
+
+textarea {
+    width: 100%;
+    max-width:400px !important;
+    height:200px;
+    border:1px solid #ccc;
+    font-family: 'Merriweather', serif !important;
+}
+
+
+select {
+	-webkit-appearance: none;
+	width:auto;
+	height:34px;
+	padding:5px;
+	padding-left:10px;
+	padding-right:10px;
+	float: left;
+	font-size: 14px;
+	margin-right:0px;
+	border:1px solid #ccc !important;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	font-family: 'Oswald', sans-serif;
+	text-transform:uppercase;
+	font-weight:100;
+	background-color:#fff;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/arrow5.svg) no-repeat right #fff;
+	background-size: 12px 12px;
+	background-position: 92% 50%; 
+	-moz-appearance:none;
+    text-align:left;
+}
+
+
+select, 
+.location {
+	-webkit-appearance: none;
+	width:auto;
+	height:34px;
+	padding:5px;
+	padding-left:10px;
+	padding-right:10px;
+	float: left;
+	font-size: 14px;
+	margin-right:20px;
+	border:1px solid #ccc !important;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	font-family: 'Oswald', sans-serif;
+	text-transform:uppercase;
+	font-weight:100;
+	background-color:#fff;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/arrow5.svg) no-repeat right #fff;
+	background-size: 12px 12px;
+	background-position: 92% 50%; 
+	-moz-appearance:none;
+	text-align:left;
+    
+}
+
+select, 
+.event {
+	-webkit-appearance: none;
+	width:auto;
+	height:34px;
+	padding:5px;
+	padding-left:10px;
+	padding-right:10px;
+	float: left;
+	font-size: 14px;
+	margin-right:20px;
+	border:1px solid #ccc !important;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	font-family: 'Oswald', sans-serif;
+	text-transform:uppercase;
+	font-weight:100;
+	background-color:#fff;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/arrow5.svg) no-repeat right #fff;
+	background-size: 12px 12px;
+	background-position: 92% 50%; 
+	-moz-appearance:none;
+	text-align:left;
+	
+}
+
+
+.required {
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/asterix.svg) no-repeat #f7f7f7 right !important;
+	background-size: 8px 8px !important;
+	background-position: 98% 10px !important; 
+}
+.required:focus {
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/asterix.svg) no-repeat #fff right !important;
+	background-size: 8px 8px !important;
+	background-position: 98% 10px !important; 
+}
+
+
+.wwwsida {
+	padding-left:35px !important;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/socialaIkoner/www_round.svg) no-repeat #f7f7f7 right !important;
+	background-size: 20px 20px !important;
+	background-position: 8px 50% !important; 
+}
+
+.wwwsida:focus {
+	padding-left:35px !important;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/socialaIkoner/www_round.svg) no-repeat #fff right !important;
+	background-size: 20px 20px !important;
+	background-position: 8px 50% !important; 
+}
+
+.telefon {
+	padding-left:35px !important;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/phone.svg) no-repeat #f7f7f7 right !important;
+	background-size: 20px 20px !important;
+	background-position: 8px 50% !important; 
+}
+
+.telefon:focus {
+	padding-left:35px !important;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/phone.svg) no-repeat #fff right !important;
+	background-size: 20px 20px !important;
+	background-position: 8px 50% !important; 
+}
+
+
+.epost {
+	padding-left:35px !important;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/mail.svg) no-repeat #f7f7f7 right !important;
+	background-size: 20px 20px !important;
+	background-position: 8px 50% !important; 
+}
+
+.epost:focus {
+	padding-left:35px !important;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/mail.svg) no-repeat #fff right !important;
+	background-size: 20px 20px !important;
+	background-position: 8px 50% !important; 
+}
+
+
+
+
+
+
+
+
+
+
+
+.facebooksida {
+	padding-left:35px !important;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/socialaIkoner/facebook_round.svg) no-repeat #f7f7f7 right !important;
+	background-size: 20px 20px !important;
+	background-position: 8px 50% !important; 
+}
+
+.facebooksida:focus {
+	padding-left:35px !important;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/socialaIkoner/facebook_round.svg) no-repeat #fff right !important;
+	background-size: 20px 20px !important;
+	background-position: 8px 50% !important; 
+}
+
+
+.twitterkonto {
+	padding-left:35px !important;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/socialaIkoner/twitter_round.svg) no-repeat #f7f7f7 right !important;
+	background-size: 20px 20px !important;
+	background-position: 8px 50% !important; 
+}
+
+.twitterkonto:focus {
+	padding-left:35px !important;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/socialaIkoner/twitter_round.svg) no-repeat #fff right !important;
+	background-size: 20px 20px !important;
+	background-position: 8px 50% !important; 
+}
+
+
+.instagramkonto {
+	padding-left:35px !important;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/socialaIkoner/instagram_round.svg) no-repeat #f7f7f7 right !important;
+	background-size: 20px 20px !important;
+	background-position: 8px 50% !important; 
+}
+
+.instagramkonto:focus {
+	padding-left:35px !important;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/socialaIkoner/instagram_round.svg) no-repeat #fff right !important;
+	background-size: 20px 20px !important;
+	background-position: 8px 50% !important; 
+}
+
+
+
+
+/** form slut */
+
+
+/** Listningen start **/
+
+.mainContainer {
+	background-color:#fff;
+	width:100%; 
+	float:left; 
+	padding-right:0px;
+}
+
+.mainContainerEmbed {
+	background-color:#fff;
+	float:left; 
+	padding:10px;
+	border:1px solid #ccc; 
+	width:100%; 
+	max-width:620px;
+}
+
+.contentContainer {
+	color:#000 !important;
+	background-color:#fff !important;
+	padding: 0px 0px 10px 0px;
+	margin-top:0px;
+	margin-bottom:5px;
+	border-bottom: 1px solid #ccc; 
+	height:auto; 
+	float:none; 
+	overflow:hidden;
+	position:relative; 
+	/**top:-20px !important; **/
+}
+
+.contentContainer a {
+	color:#000 !important;
+	text-decoration:none !important;
+	
+}
+    
+.contentContainer:hover {
+
+ }
+
+.contentContainerSingle {
+	color:#000 !important;
+	background-color:#fff !important;
+	padding: 0px 0px 10px 0px;
+	margin-top:0px;
+	margin-bottom:10px;
+	border-bottom: 1px solid #ccc; 
+	height:auto; 
+	float:none; 
+	overflow:hidden;
+	
+}
+
+.contentContainerSingleEmbed {
+	color:#000 !important;
+	background-color:#fff !important;
+	padding: 0px 0px 0px 0px;
+	margin-top:0px;
+	margin-bottom:0px;
+	height:auto; 
+	float:none; 
+	overflow:hidden;
+	
+}
+
+
+.contentContainerSingle:hover {
+
+}
+
+
+
+	
+.innerContentContainer {
+	width: 100%; 
+	margin-top:5px; 
+	margin-bottom:0px; 
+	padding-right:0px; 
+	height:100%; 
+	background-color:#fff;
+}
+	
+.thumbnailContainer {
+	display: inline-block;
+	background-position: center !important; 
+    width:267px;
+    height:180px !important;
+	max-height:180px;
+	overflow:hidden !important;
+	vertical-align: middle;
+	margin-bottom:0px;
+	margin-right:20px;
+	float:left;
+	clear:none;
+}
+
+.thumbnailContainer980 {
+	display: inline-block;
+	background-position: center !important; 
+    width:356px;
+    height:240px !important;
+	max-height:240px;
+	overflow:hidden !important;
+	vertical-align: middle;
+	margin-bottom:0px;
+	margin-right:0px;
+	float:left;
+	clear:none;
+}
+
+.thumbnail {
+    no-repeat; !important; 
+	color:#fff; 
+	background-size: cover !important;
+    background-position: center !important; 
+	height:100%;
+}
+
+.thumbnailSidebarContainer {
+	display: inline-block;
+	background-position: center !important; 
+    width:128px;
+    height:72px !important;
+	max-height:72px;
+	overflow:hidden !important;
+	vertical-align: middle;
+	margin-right:10px;
+	float:left;
+	clear:none;
+}
+
+.thumbnailContainerMap {
+	display: inline-block;
+	background-position: center !important; 
+    width:100%;
+    height:180px !important;
+	max-height:180px;
+	overflow:hidden !important;
+	vertical-align: middle;
+	margin-bottom:10px;
+	float:left;
+	clear:none;
+}
+
+.thumbnailMap {
+    no-repeat; !important; 
+	color:#fff; 
+	background-size: cover !important;
+    background-position: center !important; 
+	height:100%;
+}
+
+
+.eventType {
+	display:inline-block;
+    font-family: Oswald; 
+    font-size:11px; 
+    text-transform:uppercase; 
+    padding:0px; 
+    height:15px; 
+    background-color:#000 !important; 
+    position:relative;
+    top:0px; 
+    left:0px;
+    padding-top:2px;
+	padding-left:5px;
+	padding-right:5px;
+	padding-bottom:17px;
+    color:#fff;
+}
+
+.eventType980 {
+	display:inline-block;
+    font-family: Oswald; 
+    font-size:11px; 
+    text-transform:uppercase; 
+    padding:0px; 
+    height:15px; 
+    background-color:#000 !important; 
+    position:relative;
+    top:0px; 
+    left:0px;
+    padding-top:3px;
+	padding-left:5px;
+	padding-right:5px;
+	padding-bottom:2px;
+    color:#fff;
+}
+
+.listText {
+	width:480px;
+	float:left;
+	line-height:1.1;
+}
+
+.listText980 {
+	width:580px;
+	float:left;
+	line-height:1.1;
+	margin-top:20px;
+	margin-left:20px;
+	margin-right:20px;
+}
+
+.listText980 a {
+	font-family: 'Merriweather', serif;
+	color:#000 !important;
+	text-decoration:none !important;
+}
+
+.listTextSingle {
+	font-size:14px;
+	width:100%;
+	float:left;
+	line-height:1.5;
+}
+
+.listTextSingleEmbed {
+	font-size:14px;
+	width:100%;
+	float:left;
+	line-height:1.5;
+}
+
+a, .listText {
+	font-family: 'Merriweather', serif;
+}
+
+.listTitle {
+	font-family: 'Oswald', sans-serif;
+	font-size:24px;
+	text-transform:none;
+	font-weight:700;
+	margin-top:0px;
+	margin-bottom:10px;
+	position:relative;
+	top:0px;
+}
+
+.listTitle980 {
+	font-family: 'Oswald', sans-serif;
+	font-size:30px;
+	text-transform:none;
+	font-weight:700;
+	margin-top:0px;
+	margin-bottom:10px;
+	position:relative;
+	top:0px;
+}
+
+.listLocationDate {
+	font-family: 'Oswald', sans-serif;
+	font-weight:200;
+	font-size:15px;
+	text-transform:uppercase;
+	margin-top:0px;
+	margin-bottom:6px;
+	line-height: 1.3;
+}
+	
+.featuredHeader {
+	font-family: 'Oswald', sans-serif;
+	font-weight:700;
+	font-size:38px;
+	line-height:1.1;
+	text-transform:uppercase;
+	margin-top:40px;
+	margin-bottom:10px;
+}	
+
+.featuredEvent {
+	position:relative;
+	height: 200px;
+  	width: 324px;
+  	overflow: hidden;
+  	float:left;
+  	background-color:#000;
+  	margin:1px;
+  	text-align:center;
+}
+
+.featuredImg {
+	no-repeat; !important; 
+	color:#fff; 
+	background-size: cover !important;
+    background-position: center !important; 
+	height:100%;
+  }
+  
+  .featuredImg:hover {
+    zoom: 105%;
+  }
+
+.featuredTextContainer {
+	width:100%;
+	padding-top:50px;
+	padding-bottom:10px;
+	padding-left:20px;
+	padding-right:20px;
+	position:absolute;
+	bottom:0px;	
+	background: black; /* For browsers that do not support gradients */
+ 	background: -webkit-linear-gradient(bottom,rgba(0,0,0,0),rgba(0,0,0,10)); /*Safari 5.1-6*/
+ 	background: -o-linear-gradient(bottom,rgba(0,0,0,0),rgba(0,0,0,10)); /*Opera 11.1-12*/
+  	background: -moz-linear-gradient(bottom,rgba(0,0,0,0),rgba(0,0,0,10)); /*Fx 3.6-15*/
+	background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,10)); /*Standard*/
+}
+
+
+
+.featuredTitle {
+	font-family: 'Oswald', sans-serif;
+	font-weight:700;
+	font-size:20px;
+	line-height:1.1;
+	text-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+	text-transform: uppercase;
+}
+
+
+.featuredText {
+	font-family: 'Merriweather', serif;
+	font-weight:900;
+	font-size:12px;
+	color:#fff;	
+}
+    
+.featuredEventType {
+	display:inline-block;
+    font-family: Oswald; 
+    font-size:12px; 
+    text-transform:uppercase; 
+    padding:0px; 
+    height:15px; 
+    background-color:#000 !important; 
+    position:absolute; 
+    top:0px; 
+    left:0px;
+    padding-left:5px; 
+    padding-right:5px; 
+    padding-top:2px; 
+    padding-bottom:18px;
+}
+
+.listEventType {
+	display:inline-block;
+    font-family: Oswald; 
+    font-size:12px; 
+    text-transform:uppercase; 
+    padding:0px; 
+    height:20px;
+    width:auto;
+    background-color:#000 !important; 
+    position:relative; 
+    top:0px; 
+    padding-left:5px; 
+    padding-right:5px; 
+    padding-top:2px; 
+    padding-bottom:3px;
+    line-height:1.5;
+}
+    
+ 
+.featuredImg:hover, 
+.featuredEventType {
+     background-color:#000 !important;
+     opacity: 1;
+  } 
+  
+.listDate {
+  	font-family: 'Oswald', sans-serif;
+  	font-size:20px;
+  	font-weight:900;
+  	color:#d7713d;
+  	text-transform:uppercase;
+  	padding:0px;
+  	margin-top:30px;
+  	margin-bottom:10px;
+	width:100%;
+	/** border-bottom: 1px solid #ccc; **/
+  }
+    
+    
+/** Listningen slut **/
+
+
+/** Sidebar **/
+
+.sidebar {
+	float:left; 
+	width:320px; 
+	background-color:#fff;
+	padding-left:0px;
+	margin-left:0;
+	padding-left:10px;
+}
+
+
+.sidebarHeadlines{
+	font-family: 'Oswald', sans-serif;
+	font-size:20px;
+	color:#d7713d;
+	text-transform:uppercase;
+	margin-top:0px;
+	margin-bottom:5px;
+}
+
+.sidebarList{
+	font-family: 'Merriweather', serif;
+	font-size:12px;
+}
+
+/** Sidebar slut **/
+
+
+
+
+
+
+/** Widget **/
+.widget {
+	width: 300px;
+	margin:0px;
+	border-bottom:1px solid #ccc !important;
+	padding-bottom:10px;
+	margin-bottom:10px;
+	margin-left:10px;
+}
+
+.widget_search {
+	border-top:none !important;
+	border:none !important;
+}
+
+/** Widget slut **/
+
+
+/** Artikelvy start **/
+
+
+.articleContainer {
+	width:980px;
+	margin-top:24px;
+	margin-left:50px;
+	margin-rigth:20px;
+	padding-right:20px;
+}
+
+.contentSingle {
+	width:100%:
+	background-color:#000;
+	height:auto;
+}
+
+.single-title {
+	font-family: 'Oswald', sans-serif;
+	font-weight:700;
+	font-size:30px;
+	color:#000 !important;
+	line-height:1.1;
+	margin-top:10px !important;
+	margin-bottom:15px !important;
+}
+
+.theText {
+	float:none;
+	margin-top:0px;
+	font-size:14px;
+	line-height:1.45 !important;
+	width:100%;
+}
+
+
+/** Article **/
+
+.entry-header {
+	width:100%;
+	max-width:1168px !important;
+	margin-top:0px !important;
+}
+
+.single-content {
+	width:650px;
+	height:auto !important;
+	padding-bottom:0px !important;
+	background-color:#fff;
+    padding-right:10px;
+    float: left; 
+    margin-bottom:0px; 
+    border-right: 1px solid #ccc;
+}
+
+.single-contentEmbed {
+	width:100%;
+	height:auto !important;
+	padding-bottom:0px !important;
+	background-color:#fff;
+    float: left; 
+    margin-bottom:0px; 
+}
+
+.singleImage {
+	width:100%;
+	max-width:100% !important;
+	height:auto;
+	margin-bottom:10px;
+	-webkit-filter: grayscale(0%)!important;
+ 	filter: grayscale(0%)!important;
+}
+
+
+
+
+
+/** Footer **/
+.pagangFooter {
+	position:relative;
+	bottom:0px;
+	background-color:#000 !important;
+	float:none;
+	width:100%;
+	min-height:300px;
+	margin-top:20px;
+	max-height:1000px;
+	padding-top:50px;
+	font-family: 'Merriweather', serif;
+	font-size:14px;
+	background-image: url(http://ev.mitti.se/wp-content/themes/pagang/pg-img/Mitti_silhuett.svg);
+	no-repeat; !important; 
+	background-size: cover !important;
+    background-position: center !important; 
+}
+/** Footer slut **/
+
+
+
+
+
+
+
+
+/* In this example, this is the main item being resized */
+.Image_Wrapper{
+    /* to get the fade in effect, set opacity to 0 on the first element within the gallery area */
+}
+
+
+.Caption{
+    font-size:14px;
+    font-weight:normal;
+    font-family:arial;
+}
+.Caption_Content{
+    /* padding:10px; */
+    color:#FFF;
+    padding:20px;
+}
+
+/* instagram boxes */
+
+
+/* Image Box Style */
+
+
+/* Caption Common Style */
+.Image_Wrapper .caption {
+	background-color: rgba(0,0,0,0.8);
+	position: absolute;
+	color: #fff;
+	z-index: 100;
+		-webkit-transition: all 300ms ease-out;
+		-moz-transition: all 300ms ease-out;
+		-o-transition: all 300ms ease-out;
+		-ms-transition: all 300ms ease-out;	
+		transition: all 300ms ease-out;
+	left: 0;
+}
+
+
+/** Caption 1: Simple **/
+.Image_Wrapper .simple-caption {
+	padding: 10px;
+	width: 100%;
+	display: block;
+}
+
+
+/** Simple Caption :hover Behaviour **/
+.Image_Wrapper:hover .simple-caption {
+	-moz-transform: translateY(-100%);
+	-o-transform: translateY(-100%);
+	-webkit-transform: translateY(-100%);
+	opacity: 1;
+	transform: translateY(-100%);
+}
+
+/** Artikelvy slut */
+
+
+#wpadminbar {
+	top:0px !important;
+}
+
+
+
+/** Google maps start **/
+
+#map {
+        height: 400px;
+}
+      
+.controls {
+        margin-top: 10px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        height: 32px !important;
+        outline: none;
+        margin-bottom:20px;
+}
+
+
+.pac-container {
+
+}
+
+#type-selector {
+        color: #fff;
+        background-color: #4d90fe;
+        padding: 5px 11px 0px 11px;
+}
+
+#type-selector label {
+	font-size: 13px;
+	font-weight: 300;
+}
+
+/** Google maps slut **/
+
+
+iframe.noScrolling{
+	overflow: hidden;
+	position:relative; 
+	top:-8px; 
+	left:-4px;
+	margin-top:10px;
+}
+
+
+
+
+
+/** Statistiksidan **/
+
+.latestIMGContainer {
+	width:100%;
+}
+
+.latestIMG {
+	no-repeat; !important; 
+	color:#fff; 
+	background-size: cover !important;
+    background-position: center !important; 
+	min-width:20%;
+	max-width:40%;
+	min-height:200px;
+	max-height:40%;
+	float:left;
+}
+
+
+/* 14.0 */
+
+/* Mobil */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width:  640px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait)
+  {
+
+body {
+	margin:10px;
+}
+
+.phone {
+	display:block !important;
+	opacity:1.0 !important;
+}
+
+.desktop {
+	display:none !important;
+	opacity:0.0 !important;
+	height:0px;
+}
+
+.site-main {
+	width:100% !important;
+	max-width:100% !important;
+	margin:10px;
+}
+
+.site {
+	max-width:100%;
+	width:100%;
+	margin-top:0px;
+	min-height:1vh;
+}
+
+.site-content {
+	margin-top:20px;
+}
+
+.content-area {
+	max-width:100%;
+	width:100%;
+}
+
+.site-inner {
+	max-width:100%;
+	width:100%;
+	margin-top:0px !important;
+}
+
+.site-header-main {
+	max-width:100%;
+	width:100%;
+}
+
+.contentContainer {
+	color:#000 !important;
+	background-color:#fff !important;
+	padding: 0px 0px 10px 0px;
+	margin-top:0px;
+	margin-bottom:5px;
+	border-bottom: 1px solid #ccc; 
+	height:auto; 
+	float:none; 
+	overflow:hidden;
+	position:relative; 
+	top:0px !important;
+	float:left;
+}
+
+.articleContainer {
+	max-width:100%;
+	width:100%;
+	margin-top:24px;
+	margin-left:0px;
+	margin-rigth:0px ;
+	padding-right:0px;
+}
+
+.content-area {
+	max-width:100%;
+	width:100%;
+}
+
+#primary {
+	margin:0px;
+}
+
+.mainContainer {
+	background-color:#fff;
+	width:100% !important;
+	border-right:none !important;
+	padding-right:0px !important;
+	margin-right:0px !important;
+}
+
+.headerContainer {
+	max-width:100%;
+	width:100%;
+	margin-top:0px;
+	height:100px;
+	padding:0 !important;
+	margin-bottom:0px !important;
+	padding-bottom:0px;
+
+}
+
+.logoContainer {
+	margin-bottom:0px !important;
+	height:50px !important;
+	max-width:100%;
+	width:100%;
+	position:relative;
+	top:-0px;
+
+}
+
+.tipsa {
+	position:absolute;
+	width:50px;
+	height:50px;
+	top: 0px;
+	right: 0px;
+}
+
+.contentContainer {
+	max-width:100%;
+	width:100%;
+    margin-top:0px !important;
+}
+
+.totalcontainer {
+	max-width:100%;
+	width:100%;
+}
+
+.contentContainerSingle {
+	color:#000 !important;
+	background-color:#fff !important;
+	padding: 0px 0px 10px 0px;
+	margin-top:0px;
+	margin-bottom:10px;
+	border-bottom: 1px solid #ccc; 
+	height:auto; 
+	float:none; 
+	overflow:hidden;
+
+}
+
+.innerContentContainer {
+	width: 100%; 
+	margin-top:5px; 
+	margin-bottom:0px; 
+	height:100%; 
+	background-color:#fff;
+	padding-right:0px; 
+}
+
+.innerContentContainer980 {
+	width: 100%; 
+	margin-top:0px; 
+	margin-bottom:0px; 
+	height:100%; 
+	background-color:#fff;
+	padding-right:0px; 
+}
+
+.thumbnailContainer {
+	display: inline-block;
+	background-position: center !important; 
+    width:100% !important;
+    height:191px !important;
+	max-height:191px;
+	overflow:hidden !important;
+	vertical-align: middle;
+	margin-bottom:10px;
+}
+
+.thumbnail {
+    no-repeat; !important; 
+	color:#fff; 
+	background-size: cover !important;
+    background-position: center !important; 
+	height:100%;
+}
+      
+.single-content {
+   	width:100%;
+    padding-right:0px;
+	height:auto !important;
+	padding-bottom:0px !important;
+	background-color:#fff;
+    padding-right:0px;
+    float: left; 
+    margin-bottom:0px; 
+    border-right: none;
+    margin-top:20px;
+}
+
+.eventType {
+    font-family: Oswald; 
+    font-size:11px; 
+    text-transform:uppercase; 
+    padding:0px; 
+    height:15px; 
+    background-color:#000 !important; 
+    position:relative;
+    top:0px; 
+    left:0px;
+    padding-top:3px;
+	padding-left:5px;
+	padding-right:5px;
+	padding-bottom:15px;
+    color:#fff;
+    line-height:1.3 !important;
+}
+
+.listTitle {
+	font-family: 'Oswald', sans-serif;
+	font-size:24px;
+	text-transform:none;
+	font-weight:700;
+	margin-top:0px !important;
+	line-height:1.1;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+.listText {
+	width:100%;
+	float:left;
+	line-height:1.1;
+}
+
+a, .listText {
+	font-family: 'Merriweather', serif;
+	line-height:1.4;
+}
+
+.listTextSingle {
+	font-size:16px;
+	width:100%;
+	float:left;
+	line-height:1.5;
+}
+
+.listTextSingleEmbed {
+	font-size:16px;
+	width:320px;
+	float:left;
+	line-height:1.5;
+}
+
+.theText {
+	float:none;
+	margin-top:5px;
+	font-size:15px;
+	line-height:1.4 !important;
+}
+
+.listLocationDate {
+	font-size:16px;
+	margin-top:10px;
+	margin-bottom:0px !important;
+}
+
+.categories {
+	font-family: 'Oswald', sans-serif !important;
+	font-weight: 100; 
+	font-size:18px; 
+	text-rendering: optimizeLegibility; 
+	text-transform:uppercase; 
+	color:#999;
+	margin-top:16px;
+	letter-spacing:-1px;
+}
+
+/** form start */
+.formContainer {
+	float:none;
+	clear:both;
+	margin-bottom:0px;
+	padding-bottom:0px;
+	border-bottom: 1px solid #ccc;
+	width:100%;
+	background-color:#fff;
+	padding-top:0px;
+	margin-top:10px !important;
+}
+
+input[type="submit"].skicka{
+	background-color: #000;
+	width:100%;
+	font-size:18px;
+	height:50px;
+	color: #fff;
+	padding-left:10px;
+	padding-top:8px !important;
+	padding-bottom:5px !important;
+	font-family: 'Oswald', sans-serif !important;
+	text-transform:uppercase;
+	font-weight:700;
+	background-image: url(http://apptest.mitti.se/wp-content/themes/mitti14-smal/images/search.svg);
+	background-size:40px;
+	background-repeat:no-repeat;
+	background-position:95% 50%;
+	text-align:left;
+
+}
+
+input[type="submit"]:hover.skicka {
+	background-color: #666 !important;
+	width:100%;
+	font-size:18px;
+	height:50px;
+	color: #fff;
+	padding-left:10px;
+	padding-top:8px !important;
+	padding-bottom:5px !important;
+	font-family: 'Oswald', sans-serif !important;
+	text-transform:uppercase;
+	font-weight:700;
+	background-image: url(http://apptest.mitti.se/wp-content/themes/mitti14-smal/images/search.svg);
+	background-size:40px;
+	background-repeat:no-repeat;
+	background-position:95% 50%;
+	text-align:left;
+}
+
+input[type="submit"]:active.skicka {
+	background-color: #c00d0d !important;
+	width:100%;
+	font-size:18px;
+	height:50px;
+	color: #fff;
+	padding-left:10px;
+	padding-top:8px !important;
+	padding-bottom:5px !important;
+	font-family: 'Oswald', sans-serif !important;
+	text-transform:uppercase;
+	font-weight:700;
+	background-image: url(http://apptest.mitti.se/wp-content/themes/mitti14-smal/images/search.svg);
+	background-size:40px;
+	background-repeat:no-repeat;
+	background-position:95% 50%;
+	text-align:left;
+}
+
+.tipsa2,
+input[type="submit"] {
+	font-size:16px;
+	height:50px;
+	width:100%;
+	background-color: #000;
+	color: #fff;
+	padding:5px;
+	font-family: 'Oswald', sans-serif;
+	text-transform:uppercase;
+	font-weight:700;
+	background-repeat:no-repeat;
+	border:none;
+}
+
+.tipsa2,
+input[type="submit"]:hover {
+	font-size:16px;
+	height:50px;
+	width:100%;
+	background-color: #666;
+	color: #fff;
+	padding:5px;
+	font-family: 'Oswald', sans-serif;
+	text-transform:uppercase;
+	font-weight:700;
+	background-repeat:no-repeat;
+	border:none;
+}
+
+.tipsa2,
+input[type="submit"]:active {
+	font-size:16px;
+	height:50px;
+	width:100%;
+	background-color: #c00d0d;
+	color: #fff;
+	padding:5px;
+	font-family: 'Oswald', sans-serif;
+	text-transform:uppercase;
+	font-weight:700;
+	background-repeat:no-repeat;
+	border:none;
+}
+
+
+select, 
+.location {
+	-webkit-appearance: none;
+	width:100%;
+	height:50px;
+	padding:5px;
+	padding-left:10px;
+	padding-right:10px;
+	float: left;
+	font-size: 18px;
+	margin-right:0px;
+	border:1px solid #ccc !important;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	font-family: 'Oswald', sans-serif !important;
+	text-transform:uppercase;
+	font-weight:100;
+	background-color:#fff;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/arrow5.svg) no-repeat right #fff;
+	background-size: 20px 20px;
+	background-position: 95% 50%; 
+	-moz-appearance:none;
+	margin-bottom:10px;
+	margin-top:0px;
+	z-index:999;
+}
+
+select, 
+.event {
+	-webkit-appearance: none;
+	width:100%;
+	height:50px;
+	padding:5px;
+	padding-left:10px;
+	padding-right:10px;
+	float: left;
+	font-size: 18px;
+	margin-right:0px;
+	border:1px solid #ccc !important;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	font-family: 'Oswald', sans-serif !important;
+	text-transform:uppercase;
+	font-weight:100;
+	background-color:#fff;
+	background: url(http://pagang.mitti.se/wp-content/themes/pagang/pg-img/arrow5.svg) no-repeat right #fff;
+	background-size: 20px 20px;
+	background-position: 95% 50%; 
+	-moz-appearance:none;
+	margin-bottom:10px;
+	margin-top:0px;
+	z-index:999;
+}
+
+/** form slut */
+
+
+/** Sidebar **/
+
+.sidebar {
+	float:left; 
+	width:100%; 
+	background-color:#fff;
+	padding:0px;
+	margin:0;
+}
+
+
+.sidebarHeadlines{
+	font-family: 'Oswald', sans-serif;
+	font-size:20px;
+	color:#d7713d;
+	text-transform:uppercase;
+	margin-top:0px;
+	margin-bottom:5px;
+}
+
+.sidebarList{
+	font-family: 'Merriweather', serif;
+	font-size:12px;
+}
+
+/** Sidebar slut **/
+
+
+/** Widget **/
+.widget {
+	width: 100%;
+	margin:0px;
+	border-bottom:1px solid #ccc !important;
+	padding-bottom:10px;
+	margin-bottom:10px;
+	margin-left:0px;
+}
+
+.widget_search {
+	border-top:none !important;
+	border:none !important;
+}
+
+/** Widget slut **/
+
+/** Footer **/
+.pagangFooter {
+	width:100%;
+	height:300px;
+	margin-top:10px;
+	margin-left:0px !important;
+	margin-right:0px !important;
+	padding-top:30px;
+	text-align:center;
+	font-family: 'Merriweather', serif;
+	font-size:13px;
+	margin-left:0px;
+	margin-right:0px;
+	position:relative;
+	overflow:hidden;
+}
+/** Footer slut **/
+
+
+
+/** Google maps start **/
+
+#map {
+        height: 200px;
+        width:90%;
+}
+      
+.controls {
+        margin-top: 0px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        height: 32px !important;
+        outline: none;
+        margin-bottom:10px;
+}
+
+
+.pac-container {
+
+}
+
+
+/** Google maps slut **/
+
+
+</style>			
+ 
+
+<div id="primary" class="content-area,page-content"><!-- #primary -->
+
+<div class="formContainer">
+	<form method="POST" name="myForm" action="http://pagang.mitti.se/wp-content/themes/pagang/formen.php"><!-- Form start -->	
+		
+		<div class="menu-omrade-container"><select class="location" id="test1" name="areaName"><option value="stockholm"">Hela Stockholm<option value="bandhagen-arsta"">Bandhagen/Årsta<option value="botkyrka-salem"">Botkyrka/Salem<option value="bromma"">Bromma<option value="danderyd"">Danderyd<option value="farsta-skondal"">Farsta/Sköndal<option value="hammarby-skarpnack"">Hammarby/Skarpnäck<option value="haninge"">Haninge<option value="huddinge"">Huddinge<option value="jarfalla"">Järfälla<option value="kista"">Kista<option value="kungsholmen"">Kungsholmen<option value="lidingo"">Lidingö<option value="liljeholmen-alvsjo"">Liljeholmen/Älvsjö<option value="nacka"">Nacka<option value="skarholmen"">Skärholmen<option value="sollentuna"">Sollentuna<option value="solna"">Solna<option value="sundbyberg"">Sundbyberg<option value="sodermalm"">Södermalm<option value="sodra-roslagen"">Södra Roslagen<option value="tensta-rinkeby"">Tensta/Rinkeby<option value="tyreso"">Tyresö<option value="taby"">Täby<option value="upplands-vasby"">Upplands Väsby<option value="upplands-bro"">Upplands-Bro<option value="vallentuna"">Vallentuna<option value="vasastan"">Vasastan<option value="varmdo"">Värmdö<option value="vasterort-spanga"">Västerort/Spånga<option value="ostermalm"">Östermalm</select></div>	
+		    
+		<div class="menu-evenemangstyp-container"><select class="location id="test2" name="eventName"><option value="evenemang"">Evenemang<option value="barn"">Barn<option value="bibliotek"">Bibliotek<option value="film"">Film<option value="forelasning"">Föreläsning & kurs<option value="guide"">Guidning<option value="kultur"">Kultur<option value="loppis"">Loppis & Marknad<option value="museum"">Museum<option value="musik"">Musik<option value="mote"">Möte<option value="pensionar"">Pensionär<option value="idrott"">Idrott<option value="medmanniska"">Medmänniska<option value="teater-dans"">Teater & dans<option value="natur"">Natur<option value="ungdom"">Ungdom<option value="utstallning"">Utställning<option value="ovrigt"">Övrigt</select></div>				    
+		<input type="submit" class="skicka" value="Sök evenemang">    
+	</form><!-- Form slut -->	
+</div><!-- .formContainer -->
+                
+<!--
+<script type="text/javascript">
+if ( $(window).width() > 739) {     
+document.write("<div>test</div>");
+}
+else {
+  //Add your javascript for small screens here
+}
+</script>
+-->
+
+
+
+<div class="desktop" style="width:100%; height:100%;  clear:both;  !important; padding-top:0px; margin-top:0px; !important; display:block;"><!-- Featured events start-->
+<div class="featuredHeader" style="width:100%; text-align:center;">
+		
+			På gång i Stockholm				
+	</div>
+			
+				
+	
+<div class="featuredEvent desktop">
+													
+	<a href="http://pagang.mitti.se/skapa-i-lera-pa-jullovet/">
+		<div class="featuredImg" style="background: url(http://pagang.mitti.se/wp-content/uploads/2017/11/715387.jpg );">
+		
+				<div class="featuredDateContainer" style="width:40px; border-radius:2px; overflow:hidden; position:absolute; top:8px; right:8px; box-shadow: 2px 2px 5px #000;">
+					<div class="featuredDateMonth" style="font-family: 'Oswald', sans-serif; background-color:#c00d0d; color:#fff;">JAN</div>
+					<div class="featuredDate" style="font-family: 'Oswald', sans-serif; background-color:#fff; color:#000; height:25px; font-size:18px;">03</div>
+				</div>
+						
+									                        
+				<div class="featuredEventType">
+				
+				
+												                        
+					<!-- Tar fram underkategori till kategori 55 (Evenemangstyp) -->
+					Barn &amp; familj					
+				</div>
+				
+				
+				
+				<div class="featuredTextContainer">
+				
+									                            
+				<div class="featuredTitle">
+				Skapa i lera på jullovet</div>
+				
+				</div>
+			</div>
+		</div>
+	</a>
+			
+			
+	
+<div class="featuredEvent desktop">
+													
+	<a href="http://pagang.mitti.se/bland-munkar-och-gillen-17/">
+		<div class="featuredImg" style="background: url(http://pagang.mitti.se/wp-content/uploads/2017/12/719475.jpg );">
+		
+				<div class="featuredDateContainer" style="width:40px; border-radius:2px; overflow:hidden; position:absolute; top:8px; right:8px; box-shadow: 2px 2px 5px #000;">
+					<div class="featuredDateMonth" style="font-family: 'Oswald', sans-serif; background-color:#c00d0d; color:#fff;">JAN</div>
+					<div class="featuredDate" style="font-family: 'Oswald', sans-serif; background-color:#fff; color:#000; height:25px; font-size:18px;">10</div>
+				</div>
+						
+									                        
+				<div class="featuredEventType">
+				
+				
+												                        
+					<!-- Tar fram underkategori till kategori 55 (Evenemangstyp) -->
+					Guidning					
+				</div>
+				
+				
+				
+				<div class="featuredTextContainer">
+				
+									                            
+				<div class="featuredTitle">
+				Bland munkar och gillen</div>
+				
+				</div>
+			</div>
+		</div>
+	</a>
+			
+			
+	
+<div class="featuredEvent desktop">
+													
+	<a href="http://pagang.mitti.se/jullovsbio-14/">
+		<div class="featuredImg" style="background: url(http://pagang.mitti.se/wp-content/uploads/2017/12/719449.jpg );">
+		
+				<div class="featuredDateContainer" style="width:40px; border-radius:2px; overflow:hidden; position:absolute; top:8px; right:8px; box-shadow: 2px 2px 5px #000;">
+					<div class="featuredDateMonth" style="font-family: 'Oswald', sans-serif; background-color:#c00d0d; color:#fff;">DEC</div>
+					<div class="featuredDate" style="font-family: 'Oswald', sans-serif; background-color:#fff; color:#000; height:25px; font-size:18px;">29</div>
+				</div>
+						
+									                        
+				<div class="featuredEventType">
+				
+				
+												                        
+					<!-- Tar fram underkategori till kategori 55 (Evenemangstyp) -->
+					Film					
+				</div>
+				
+				
+				
+				<div class="featuredTextContainer">
+				
+									                            
+				<div class="featuredTitle">
+				Jullovsbio</div>
+				
+				</div>
+			</div>
+		</div>
+	</a>
+			
+			
+	
+<div class="featuredEvent desktop">
+													
+	<a href="http://pagang.mitti.se/shakespeares-samlade-verk-5/">
+		<div class="featuredImg" style="background: url(http://pagang.mitti.se/wp-content/uploads/2017/11/710947.jpg );">
+		
+				<div class="featuredDateContainer" style="width:40px; border-radius:2px; overflow:hidden; position:absolute; top:8px; right:8px; box-shadow: 2px 2px 5px #000;">
+					<div class="featuredDateMonth" style="font-family: 'Oswald', sans-serif; background-color:#c00d0d; color:#fff;">DEC</div>
+					<div class="featuredDate" style="font-family: 'Oswald', sans-serif; background-color:#fff; color:#000; height:25px; font-size:18px;">31</div>
+				</div>
+						
+									                        
+				<div class="featuredEventType">
+				
+				
+												                        
+					<!-- Tar fram underkategori till kategori 55 (Evenemangstyp) -->
+					Teater &amp; dans					
+				</div>
+				
+				
+				
+				<div class="featuredTextContainer">
+				
+									                            
+				<div class="featuredTitle">
+				Shakespeares samlade verk</div>
+				
+				</div>
+			</div>
+		</div>
+	</a>
+			
+			
+	
+<div class="featuredEvent desktop">
+													
+	<a href="http://pagang.mitti.se/tappa-bort-5/">
+		<div class="featuredImg" style="background: url(http://pagang.mitti.se/wp-content/uploads/2017/10/706622.jpg );">
+		
+				<div class="featuredDateContainer" style="width:40px; border-radius:2px; overflow:hidden; position:absolute; top:8px; right:8px; box-shadow: 2px 2px 5px #000;">
+					<div class="featuredDateMonth" style="font-family: 'Oswald', sans-serif; background-color:#c00d0d; color:#fff;">JAN</div>
+					<div class="featuredDate" style="font-family: 'Oswald', sans-serif; background-color:#fff; color:#000; height:25px; font-size:18px;">03</div>
+				</div>
+						
+									                        
+				<div class="featuredEventType">
+				
+				
+												                        
+					<!-- Tar fram underkategori till kategori 55 (Evenemangstyp) -->
+					Barn &amp; familj					
+				</div>
+				
+				
+				
+				<div class="featuredTextContainer">
+				
+									                            
+				<div class="featuredTitle">
+				Tappa bort</div>
+				
+				</div>
+			</div>
+		</div>
+	</a>
+			
+			
+	
+<div class="featuredEvent desktop">
+													
+	<a href="http://pagang.mitti.se/grondal-ormbergets-hyresvillor/">
+		<div class="featuredImg" style="background: url(http://pagang.mitti.se/wp-content/uploads/2017/12/719508.jpg );">
+		
+				<div class="featuredDateContainer" style="width:40px; border-radius:2px; overflow:hidden; position:absolute; top:8px; right:8px; box-shadow: 2px 2px 5px #000;">
+					<div class="featuredDateMonth" style="font-family: 'Oswald', sans-serif; background-color:#c00d0d; color:#fff;">DEC</div>
+					<div class="featuredDate" style="font-family: 'Oswald', sans-serif; background-color:#fff; color:#000; height:25px; font-size:18px;">28</div>
+				</div>
+						
+									                        
+				<div class="featuredEventType">
+				
+				
+												                        
+					<!-- Tar fram underkategori till kategori 55 (Evenemangstyp) -->
+					Guidning					
+				</div>
+				
+				
+				
+				<div class="featuredTextContainer">
+				
+									                            
+				<div class="featuredTitle">
+				Gröndal Ormbergets hyresvillor</div>
+				
+				</div>
+			</div>
+		</div>
+	</a>
+			
+			
+</div><!-- .FeaturedEvent -->
+	
+			
+<div class="desktop" style="clear:both; min-height:50px; width:100%;"></div>
+	<div class="mainContainer"><!-- .mainContainer -->		
+    
+    
+          <div class="categories">
+          Hela Stockholm							
+/
+
+            Alla evenemang          </div>
+
+			
+			            
+                					
+			<div class="contentContainer"><!-- .contentContainer -->
+
+			
+		
+									
+			<div class="listDate">MÅNDAG 18 DECEMBER</div>						
+				        <div class="innerContentContainer">                     
+						
+						
+						<a href=""></a>					                        
+         			    <a href="http://pagang.mitti.se/julpyssel-2/">
+                        
+						<div class="thumbnailContainer phone"><div class="thumbnail" style="background: url(http://pagang.mitti.se/wp-content/uploads/2017/09/699028.jpg);"></div></div>                        
+                       <div class="thumbnailContainer desktop"><div class="thumbnail" style="background: url(http://pagang.mitti.se/wp-content/uploads/2017/09/699028.jpg);"></div></div>						
+						<div class="listText">
+						<div class="listTitle">Julpyssel</div>
+							<div class="listLocationDate">
+							<img src="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/location.svg" style="height:14px; position:relative; top:-2px;">
+							
+							<!-- Tar fram underkategori till kategori 53 (område) -->
+							
+							Ingarö bibliotek, Eknäsvägen, Ingarö.							
+							<br>
+							<img src="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/clock.svg" style="height:14px; position:relative; top:-2px;">
+						                              
+                               MÅNDAG 18 DECEMBER                               
+                                							</div>
+							
+							
+						
+						<div class="theText desktop">
+							<div class="eventType">
+								<!-- Tar fram underkategori till kategori 55 (Evenemangstyp) -->
+								Bibliotek							</div>	
+							Pyssla in julen på Ingarö bibliotek!
+Kom i julstämning hos oss  18 – 22 december när vi dukar upp extra kul julpyssel. Se öppettider på varmdo.se/bibliotek.						</div>
+						
+						
+						<div class="theText phone">
+							<div class="eventType">
+								<!-- Tar fram underkategori till kategori 55 (Evenemangstyp) -->
+								Bibliotek							</div>	
+							Pyssla in julen på Ingarö bibliotek!
+Kom i julstämning hos oss  18 – 22 december när vi dukar upp extra kul julpyssel. Se öppettider på varmdo.se/bibliotek.						</div>
+                        
+                    	
+					
+						<div></div>
+						
+                      </a>
+						</div>
+					<div class="desktop" style="background-color:#fff; width:184px; height:180px; float:right; margin-left:10px; padding-left:10px; border-left: 1px solid #ccc;">
+						
+						
+					</div>
+              		</div>
+				</div><!-- .contentContainer -->                
+                        
+                					
+			<div class="contentContainer"><!-- .contentContainer -->
+
+			
+		
+									
+									
+				        <div class="innerContentContainer">                     
+						
+						
+						<a href=""></a>					                        
+         			    <a href="http://pagang.mitti.se/gammeldans-20/">
+                        
+						                        
+                       						
+						<div class="listText">
+						<div class="listTitle">Gammeldans</div>
+							<div class="listLocationDate">
+							<img src="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/location.svg" style="height:14px; position:relative; top:-2px;">
+							
+							<!-- Tar fram underkategori till kategori 53 (område) -->
+							
+							Birgittavägen 21, Jakobsberg.							
+							<br>
+							<img src="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/clock.svg" style="height:14px; position:relative; top:-2px;">
+						                              
+                               MÅNDAG 18 DECEMBER                               
+                                							</div>
+							
+							
+						
+						<div class="theText desktop">
+							<div class="eventType">
+								<!-- Tar fram underkategori till kategori 55 (Evenemangstyp) -->
+								Teater &amp; dans							</div>	
+							Dansa gammeldans kl 19:30 - 22:00 till Kollijox i Aspnässkolans matsal, Birgittavägen 21, infart från Viksjöleden. Entré 60 kr.
+
+Tag gärna med eget fika.
+
+Arrangör Gammeldansens Vänner (GDV) i Jakobsberg i samarbete med Studieförbundet Vuxenskolan						</div>
+						
+						
+						<div class="theText phone">
+							<div class="eventType">
+								<!-- Tar fram underkategori till kategori 55 (Evenemangstyp) -->
+								Teater &amp; dans							</div>	
+							Dansa gammeldans kl 19:30 - 22:00 till Kollijox i Aspnässkolans matsal, Birgittavägen 21, infart från Viksjöleden. Entré 60 kr.
+
+Tag gärna med eget fika.
+
+Arrangör Gammeldansens...						</div>
+                        
+                    	
+					
+						<div></div>
+						
+                      </a>
+						</div>
+					<div class="desktop" style="background-color:#fff; width:184px; height:180px; float:right; margin-left:10px; padding-left:10px; border-left: 1px solid #ccc;">
+						
+<div style="position:absolute; bottom:10px;"><div style="font-family: Oswald, sans-serif; font-weight:700; text-transform:uppercase; margin-top:10px; margin-bottom:0px;">Kontakt:</div><div style="font-family: Merriweather, serif; font-size:12px !important; line-height:1.2 !important;"><a href="mailto:gdvjakobsberg@live.se." target="_top"style="color:#c00d0d !important;">E-post</a><br><a href="http://www.gdvjakobsberg.se"style="color:#c00d0d !important;">Webbsida</a></div></div>						
+					</div>
+              		</div>
+				</div><!-- .contentContainer -->                
+                        
+                					
+			<div class="contentContainer"><!-- .contentContainer -->
+
+			
+		
+									
+									
+				        <div class="innerContentContainer">                     
+						
+						
+						<a href=""></a>					                        
+         			    <a href="http://pagang.mitti.se/drop-in-kundaliniyoga-3/">
+                        
+						                        
+                       						
+						<div class="listText">
+						<div class="listTitle">Drop-in Kundaliniyoga</div>
+							<div class="listLocationDate">
+							<img src="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/location.svg" style="height:14px; position:relative; top:-2px;">
+							
+							<!-- Tar fram underkategori till kategori 53 (område) -->
+							
+							Torsgatan 8B, Vasastan.							
+							<br>
+							<img src="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/clock.svg" style="height:14px; position:relative; top:-2px;">
+						                              
+                               MÅNDAG 18 DECEMBER                               
+                                							</div>
+							
+							
+						
+						<div class="theText desktop">
+							<div class="eventType">
+								<!-- Tar fram underkategori till kategori 55 (Evenemangstyp) -->
+								Idrott							</div>	
+							Välkommen att pröva på Kundaliniyoga. Under vissa datum kommer jag att erbjuda drop-in pass för dig som vill pröva på Kundaliniyoga. Kundaliniyoga kallas för medvetenhetens yoga eftersom den ger enkla redskap till ökad uthållighet och koncentrationsförmåga, medvetenhet och medkänsla. Kl. 18:00-19...						</div>
+						
+						
+						<div class="theText phone">
+							<div class="eventType">
+								<!-- Tar fram underkategori till kategori 55 (Evenemangstyp) -->
+								Idrott							</div>	
+							Välkommen att pröva på Kundaliniyoga. Under vissa datum kommer jag att erbjuda drop-in pass för dig som vill pröva på Kundaliniyoga. Kundaliniyoga kallas för medvetenhetens yoga...						</div>
+                        
+                    	
+					
+						<div></div>
+						
+                      </a>
+						</div>
+					<div class="desktop" style="background-color:#fff; width:184px; height:180px; float:right; margin-left:10px; padding-left:10px; border-left: 1px solid #ccc;">
+						
+<div style="position:absolute; bottom:10px;"><div style="font-family: Oswald, sans-serif; font-weight:700; text-transform:uppercase; margin-top:10px; margin-bottom:0px;">Kontakt:</div><div style="font-family: Merriweather, serif; font-size:12px !important; line-height:1.2 !important;"><a href="mailto:yoga@yourdharmastudio.se." target="_top"style="color:#c00d0d !important;">E-post</a><br>Tel: 076-787 90 78.<br><a href="https://calendly.com/yourdharma/kundaliniyoga."style="color:#c00d0d !important;">Webbsida</a></div></div>						
+					</div>
+              		</div>
+				</div><!-- .contentContainer -->                
+                        
+                					
+			<div class="contentContainer"><!-- .contentContainer -->
+
+			
+		
+									
+									
+				        <div class="innerContentContainer">                     
+						
+						
+						<a href=""></a>					                        
+         			    <a href="http://pagang.mitti.se/qigong-55/">
+                        
+						                        
+                       						
+						<div class="listText">
+						<div class="listTitle">Qigong</div>
+							<div class="listLocationDate">
+							<img src="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/location.svg" style="height:14px; position:relative; top:-2px;">
+							
+							<!-- Tar fram underkategori till kategori 53 (område) -->
+							
+							Hurtigs torg, Haninge.							
+							<br>
+							<img src="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/clock.svg" style="height:14px; position:relative; top:-2px;">
+						                              
+                               MÅNDAG 18 DECEMBER                               
+                                							</div>
+							
+							
+						
+						<div class="theText desktop">
+							<div class="eventType">
+								<!-- Tar fram underkategori till kategori 55 (Evenemangstyp) -->
+								Pensionär							</div>	
+							13:00-13:45 är du välkommen till Mötesplats Jordbro där  seniorqigong görs genom att lyssna på en CD (ingen ledare) ca 30 min, sen avslappning ca 15 min						</div>
+						
+						
+						<div class="theText phone">
+							<div class="eventType">
+								<!-- Tar fram underkategori till kategori 55 (Evenemangstyp) -->
+								Pensionär							</div>	
+							13:00-13:45 är du välkommen till Mötesplats Jordbro där  seniorqigong görs genom att lyssna på en CD (ingen ledare) ca 30 min, sen avslappning ca 15 min						</div>
+                        
+                    	
+					
+						<div></div>
+						
+                      </a>
+						</div>
+					<div class="desktop" style="background-color:#fff; width:184px; height:180px; float:right; margin-left:10px; padding-left:10px; border-left: 1px solid #ccc;">
+						
+<div style="position:absolute; bottom:10px;"><div style="font-family: Oswald, sans-serif; font-weight:700; text-transform:uppercase; margin-top:10px; margin-bottom:0px;">Kontakt:</div><div style="font-family: Merriweather, serif; font-size:12px !important; line-height:1.2 !important;"><a href="mailto:lena.hornqvist@haninge.se." target="_top"style="color:#c00d0d !important;">E-post</a><br>Tel: 08-606 4914.<br></div></div>						
+					</div>
+              		</div>
+				</div><!-- .contentContainer -->                
+                        
+                					
+			<div class="contentContainer"><!-- .contentContainer -->
+
+			
+		
+									
+									
+				        <div class="innerContentContainer">                     
+						
+						
+						<a href=""></a>					                        
+         			    <a href="http://pagang.mitti.se/foraldraforum-3/">
+                        
+						                        
+                       						
+						<div class="listText">
+						<div class="listTitle">Föräldraforum</div>
+							<div class="listLocationDate">
+							<img src="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/location.svg" style="height:14px; position:relative; top:-2px;">
+							
+							<!-- Tar fram underkategori till kategori 53 (område) -->
+							
+							Klockargården, Kyrkvägen 1, Vallentuna.							
+							<br>
+							<img src="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/clock.svg" style="height:14px; position:relative; top:-2px;">
+						                              
+                               MÅNDAG 18 DECEMBER                               
+                                							</div>
+							
+							
+						
+						<div class="theText desktop">
+							<div class="eventType">
+								<!-- Tar fram underkategori till kategori 55 (Evenemangstyp) -->
+								Övrigt							</div>	
+							Välkommen kl. 18-20 i Klockargården att prova på ett meditations/yogapass med Sandra från KORPEN. För dig som är förälder till barn/ungdomar med funktionsvariation inom autismspektrumtillstånd, ADHD, ADD eller att barnet i övrigt är i behov av särskilt stöd. Ingen anmälan behövs. Arrangör: Kommun...						</div>
+						
+						
+						<div class="theText phone">
+							<div class="eventType">
+								<!-- Tar fram underkategori till kategori 55 (Evenemangstyp) -->
+								Övrigt							</div>	
+							Välkommen kl. 18-20 i Klockargården att prova på ett meditations/yogapass med Sandra från KORPEN. För dig som är förälder till barn/ungdomar med funktionsvariation inom autismsp...						</div>
+                        
+                    	
+					
+						<div></div>
+						
+                      </a>
+						</div>
+					<div class="desktop" style="background-color:#fff; width:184px; height:180px; float:right; margin-left:10px; padding-left:10px; border-left: 1px solid #ccc;">
+						
+<div style="position:absolute; bottom:10px;"><div style="font-family: Oswald, sans-serif; font-weight:700; text-transform:uppercase; margin-top:10px; margin-bottom:0px;">Kontakt:</div><div style="font-family: Merriweather, serif; font-size:12px !important; line-height:1.2 !important;"><a href="mailto:marie.winbo@vallentuna.se." target="_top"style="color:#c00d0d !important;">E-post</a><br>Tel: 08-587 854 31.<br><a href="http://www.vallentuna.se/anhorigstod"style="color:#c00d0d !important;">Webbsida</a></div></div>						
+					</div>
+              		</div>
+				</div><!-- .contentContainer -->                
+                        
+                					
+			<div class="contentContainer"><!-- .contentContainer -->
+
+			
+		
+									
+									
+				        <div class="innerContentContainer">                     
+						
+						
+						<a href=""></a>					                        
+         			    <a href="http://pagang.mitti.se/gamla-julsanger-i-ny-skrud/">
+                        
+						<div class="thumbnailContainer phone"><div class="thumbnail" style="background: url(http://pagang.mitti.se/wp-content/uploads/2017/11/713105.jpg);"></div></div>                        
+                       <div class="thumbnailContainer desktop"><div class="thumbnail" style="background: url(http://pagang.mitti.se/wp-content/uploads/2017/11/713105.jpg);"></div></div>						
+						<div class="listText">
+						<div class="listTitle">Gamla julsånger i ny skrud!</div>
+							<div class="listLocationDate">
+							<img src="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/location.svg" style="height:14px; position:relative; top:-2px;">
+							
+							<!-- Tar fram underkategori till kategori 53 (område) -->
+							
+							Immanuelskyrkan, Kungstensgatan, Norrmalm.							
+							<br>
+							<img src="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/clock.svg" style="height:14px; position:relative; top:-2px;">
+						                              
+                               MÅNDAG 18 DECEMBER                               
+                                							</div>
+							
+							
+						
+						<div class="theText desktop">
+							<div class="eventType">
+								<!-- Tar fram underkategori till kategori 55 (Evenemangstyp) -->
+								Musik							</div>	
+							Gamla julsånger i ny musikalisk dräkt
+Familjen Dominique möter Ekeröensemblen. Familjen Dominiques årliga julkonsert med gamla som nya julsånger i härliga arrangemang! Monica, piano och sång. Carl-Axel, piano och flöjt. Jonas, kontrabas. Tua, sång. Joakim, sång och trumpet. Linda, sång. Johannes,...						</div>
+						
+						
+						<div class="theText phone">
+							<div class="eventType">
+								<!-- Tar fram underkategori till kategori 55 (Evenemangstyp) -->
+								Musik							</div>	
+							Gamla julsånger i ny musikalisk dräkt
+Familjen Dominique möter Ekeröensemblen. Familjen Dominiques årliga julkonsert med gamla som nya julsånger i härliga arrangemang! Monica, p...						</div>
+                        
+                    	
+					
+						<div></div>
+						
+                      </a>
+						</div>
+					<div class="desktop" style="background-color:#fff; width:184px; height:180px; float:right; margin-left:10px; padding-left:10px; border-left: 1px solid #ccc;">
+						
+<div style="position:absolute; bottom:10px;"><div style="font-family: Oswald, sans-serif; font-weight:700; text-transform:uppercase; margin-top:10px; margin-bottom:0px;">Kontakt:</div><div style="font-family: Merriweather, serif; font-size:12px !important; line-height:1.2 !important;"><a href="mailto:info@immanuelskyrkan.se." target="_top"style="color:#c00d0d !important;">E-post</a><br>Tel: 08 - 587 503 00.<br><a href="https://www.immanuel.se/aktuellt/las/kalender?kat=Mu"style="color:#c00d0d !important;">Webbsida</a></div></div>						
+					</div>
+              		</div>
+				</div><!-- .contentContainer -->                
+                        
+                					
+			<div class="contentContainer"><!-- .contentContainer -->
+
+			
+		
+									
+									
+				        <div class="innerContentContainer">                     
+						
+						
+						<a href=""></a>					                        
+         			    <a href="http://pagang.mitti.se/seniorbio-12/">
+                        
+						                        
+                       						
+						<div class="listText">
+						<div class="listTitle">Seniorbio</div>
+							<div class="listLocationDate">
+							<img src="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/location.svg" style="height:14px; position:relative; top:-2px;">
+							
+							<!-- Tar fram underkategori till kategori 53 (område) -->
+							
+							Fisksätra bibliotek, Fisksätra torg.							
+							<br>
+							<img src="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/clock.svg" style="height:14px; position:relative; top:-2px;">
+						                              
+                               MÅNDAG 18 DECEMBER                               
+                                							</div>
+							
+							
+						
+						<div class="theText desktop">
+							<div class="eventType">
+								<!-- Tar fram underkategori till kategori 55 (Evenemangstyp) -->
+								Film							</div>	
+							Vi visar filmen "En man som heter Ove" av Hannes Holm.
+Måndag den 18 december kl 13. Fri entré, fika till självkostnadspris.
+Kontakta Fisksätra bibliotek och boka din plats: 08 7188435; bibl.fs@nacka.se.
+Välkomna!						</div>
+						
+						
+						<div class="theText phone">
+							<div class="eventType">
+								<!-- Tar fram underkategori till kategori 55 (Evenemangstyp) -->
+								Film							</div>	
+							Vi visar filmen "En man som heter Ove" av Hannes Holm.
+Måndag den 18 december kl 13. Fri entré, fika till självkostnadspris.
+Kontakta Fisksätra bibliotek och boka din plats: 08 ...						</div>
+                        
+                    	
+					
+						<div></div>
+						
+                      </a>
+						</div>
+					<div class="desktop" style="background-color:#fff; width:184px; height:180px; float:right; margin-left:10px; padding-left:10px; border-left: 1px solid #ccc;">
+						
+<div style="position:absolute; bottom:10px;"><div style="font-family: Oswald, sans-serif; font-weight:700; text-transform:uppercase; margin-top:10px; margin-bottom:0px;">Kontakt:</div><div style="font-family: Merriweather, serif; font-size:12px !important; line-height:1.2 !important;"><a href="mailto:bibl.fs@nacka.se" target="_top"style="color:#c00d0d !important;">E-post</a><br><a href="http://www.bib.nacka.se"style="color:#c00d0d !important;">Webbsida</a></div></div>						
+					</div>
+              		</div>
+				</div><!-- .contentContainer -->                
+                        
+                					
+			<div class="contentContainer"><!-- .contentContainer -->
+
+			
+		
+									
+									
+				        <div class="innerContentContainer">                     
+						
+						
+						<a href=""></a>					                        
+         			    <a href="http://pagang.mitti.se/syn-och-horsel-37/">
+                        
+						                        
+                       						
+						<div class="listText">
+						<div class="listTitle">Syn och hörsel</div>
+							<div class="listLocationDate">
+							<img src="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/location.svg" style="height:14px; position:relative; top:-2px;">
+							
+							<!-- Tar fram underkategori till kategori 53 (område) -->
+							
+							Biblioteket, Hagstråket, Tensta.							
+							<br>
+							<img src="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/clock.svg" style="height:14px; position:relative; top:-2px;">
+						                              
+                               MÅNDAG 18 DECEMBER                               
+                                							</div>
+							
+							
+						
+						<div class="theText desktop">
+							<div class="eventType">
+								<!-- Tar fram underkategori till kategori 55 (Evenemangstyp) -->
+								Pensionär							</div>	
+							Kl.13.00-14.00.  Kommer finnas tillgänglig för rådgivning, träning och enklare service av t.ex. hörapparat, samt information om hjälpmedel för syn/hörselnedsättningar. 						</div>
+						
+						
+						<div class="theText phone">
+							<div class="eventType">
+								<!-- Tar fram underkategori till kategori 55 (Evenemangstyp) -->
+								Pensionär							</div>	
+							Kl.13.00-14.00.  Kommer finnas tillgänglig för rådgivning, träning och enklare service av t.ex. hörapparat, samt information om hjälpmedel för syn/hörselnedsättningar. 						</div>
+                        
+                    	
+					
+						<div></div>
+						
+                      </a>
+						</div>
+					<div class="desktop" style="background-color:#fff; width:184px; height:180px; float:right; margin-left:10px; padding-left:10px; border-left: 1px solid #ccc;">
+						
+<div style="position:absolute; bottom:10px;"><div style="font-family: Oswald, sans-serif; font-weight:700; text-transform:uppercase; margin-top:10px; margin-bottom:0px;">Kontakt:</div><div style="font-family: Merriweather, serif; font-size:12px !important; line-height:1.2 !important;"><a href="mailto:ann-christin.garjo@stockholm.se." target="_top"style="color:#c00d0d !important;">E-post</a><br>Tel: 08-508 017 41.<br></div></div>						
+					</div>
+              		</div>
+				</div><!-- .contentContainer -->                
+                        
+                					
+			<div class="contentContainer"><!-- .contentContainer -->
+
+			
+		
+									
+									
+				        <div class="innerContentContainer">                     
+						
+						
+						<a href=""></a>					                        
+         			    <a href="http://pagang.mitti.se/juligt-i-galleri-cupido/">
+                        
+						                        
+                       						
+						<div class="listText">
+						<div class="listTitle">Juligt i galleri Cupido</div>
+							<div class="listLocationDate">
+							<img src="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/location.svg" style="height:14px; position:relative; top:-2px;">
+							
+							<!-- Tar fram underkategori till kategori 53 (område) -->
+							
+							Galleri Cupido, Svartmangatan, Gamla stan.							
+							<br>
+							<img src="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/clock.svg" style="height:14px; position:relative; top:-2px;">
+						                              
+                               MÅNDAG 18 DECEMBER                               
+                                							</div>
+							
+							
+						
+						<div class="theText desktop">
+							<div class="eventType">
+								<!-- Tar fram underkategori till kategori 55 (Evenemangstyp) -->
+								Utställning							</div>	
+							Utställning av hantverk och lite från indien, som
+keramik, Luffarslöjd/trådarbete, smycken , kläder och stickat.						</div>
+						
+						
+						<div class="theText phone">
+							<div class="eventType">
+								<!-- Tar fram underkategori till kategori 55 (Evenemangstyp) -->
+								Utställning							</div>	
+							Utställning av hantverk och lite från indien, som
+keramik, Luffarslöjd/trådarbete, smycken , kläder och stickat.						</div>
+                        
+                    	
+					
+						<div></div>
+						
+                      </a>
+						</div>
+					<div class="desktop" style="background-color:#fff; width:184px; height:180px; float:right; margin-left:10px; padding-left:10px; border-left: 1px solid #ccc;">
+						
+						
+					</div>
+              		</div>
+				</div><!-- .contentContainer -->                
+                        
+                					
+			<div class="contentContainer"><!-- .contentContainer -->
+
+			
+		
+									
+									
+				        <div class="innerContentContainer">                     
+						
+						
+						<a href=""></a>					                        
+         			    <a href="http://pagang.mitti.se/en-svensk-sommar-2/">
+                        
+						<div class="thumbnailContainer phone"><div class="thumbnail" style="background: url(http://pagang.mitti.se/wp-content/uploads/2017/12/717654.jpg);"></div></div>                        
+                       <div class="thumbnailContainer desktop"><div class="thumbnail" style="background: url(http://pagang.mitti.se/wp-content/uploads/2017/12/717654.jpg);"></div></div>						
+						<div class="listText">
+						<div class="listTitle">En svensk sommar</div>
+							<div class="listLocationDate">
+							<img src="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/location.svg" style="height:14px; position:relative; top:-2px;">
+							
+							<!-- Tar fram underkategori till kategori 53 (område) -->
+							
+							Köpmangatan 4, Gamla stan.							
+							<br>
+							<img src="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/clock.svg" style="height:14px; position:relative; top:-2px;">
+						                              
+                               MÅNDAG 18 DECEMBER                               
+                                							</div>
+							
+							
+						
+						<div class="theText desktop">
+							<div class="eventType">
+								<!-- Tar fram underkategori till kategori 55 (Evenemangstyp) -->
+								Utställning							</div>	
+							Tania Pettersson kombinera visning av fotografiska canvastavlor med framförande av svenska låtar i Galleri Svea i Gamla Stan. Utställningen pågår till 21 december med konsert alla dagar kl. 17. Sång och bild återspeglar naturens magiska stämning. Ödsliga vikar i morgondimma, nekrosor med vattenre...						</div>
+						
+						
+						<div class="theText phone">
+							<div class="eventType">
+								<!-- Tar fram underkategori till kategori 55 (Evenemangstyp) -->
+								Utställning							</div>	
+							Tania Pettersson kombinera visning av fotografiska canvastavlor med framförande av svenska låtar i Galleri Svea i Gamla Stan. Utställningen pågår till 21 december med konsert al...						</div>
+                        
+                    	
+					
+						<div></div>
+						
+                      </a>
+						</div>
+					<div class="desktop" style="background-color:#fff; width:184px; height:180px; float:right; margin-left:10px; padding-left:10px; border-left: 1px solid #ccc;">
+						
+<div style="position:absolute; bottom:10px;"><div style="font-family: Oswald, sans-serif; font-weight:700; text-transform:uppercase; margin-top:10px; margin-bottom:0px;">Kontakt:</div><div style="font-family: Merriweather, serif; font-size:12px !important; line-height:1.2 !important;"><a href="mailto:info@pettersson-verlag.de." target="_top"style="color:#c00d0d !important;">E-post</a><br>Tel: 072-523 52 55.<br><a href="http://www.pettersson-verlag.de"style="color:#c00d0d !important;">Webbsida</a></div></div>						
+					</div>
+              		</div>
+				</div><!-- .contentContainer -->                
+                        
+     
+<div style="text-align:center; margin-top:20px;">
+<a href="http://pagang.mitti.se/page/2/" ><div style=float:right;"><img src="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/rightArrow.svg" border="0" height="40px"/></div></a></div>
+
+      
+			</div><!-- .mainContainer -->
+			</div><!-- .site-content -->
+	</div><!-- #primary -->
+
+	
+	 </div>
+
+</div><!-- #main -->
+<div style="clear:both;"></div>
+</div><!-- #page -->
+
+</div>
+
+<div class="pagangFooter desktop" style="padding-left:10%; color:#fff;">
+
+<div class="desktop">
+	<div class="footerLeft" style="float:left; width:310px; margin-right:10px;">
+	Tipsa om evenemang <a href="http://pagang.mitti.se/wp-content/themes/pagang/../../../tipsa">här.</a><br><br>
+	<a href="mailto:pagang@mitti.se?Subject=Frågor om På Gång" target="_top">Frågor om tjänsten?</a><br>
+	<a href="mailto:pagang@mitti.se?Subject=Synpunkter om På Gång" target="_top">Synpunkter och tips på utveckling?</a><br>
+	</div>
+	
+	<div class="footerCenter" style="float:left; width:310px; margin-right:10px;">
+	<a href="http://mitti.se/om-mitt-i/">Det här är Mitt i</a><br>
+	<a href="http://pagang.mitti.se/wp-content/themes/pagang/../../../cookies">Information om cookies</a>
+	</div>
+	
+	<div class="footerRight" style="float:right; width:310px; margin-top:0px;">
+	<a href="http://www.mitti.se"><img src="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/kalendarie.svg" style="width:150px;"></a>
+	</div>
+</div>
+
+</div>
+
+<div class="pagangFooter phone" style="color:#fff; overflow:hidden;">
+
+<div class="phone" style="position:relative; overflow:hidden;">
+	<div class="footerCenter" style="float:left; width:100%; margin-right:0px;">
+	Tipsa om evenemang <a href="http://pagang.mitti.se/wp-content/themes/pagang/../../../tipsa">här.</a><br><br>
+	<a href="mailto:pagang@mitti.se?Subject=Frågor om På Gång" target="_top">Frågor om tjänsten?</a><br>
+	<a href="mailto:pagang@mitti.se?Subject=Synpunkter om På Gång" target="_top">Synpunkter och tips på utveckling?</a><br>
+	<br>
+	<a href="http://mitti.se/om-mitt-i/">Det här är Mitt i</a><br>
+	<a href="http://pagang.mitti.se/wp-content/themes/pagang/../../../cookies">Information om cookies</a>
+	
+	<div style="float:none">
+	<a href="http://www.mitti.se"><img src="http://pagang.mitti.se/wp-content/themes/pagang/pg-img/kalendarie.svg" style="width:150px; padding-top:15px;"></a>
+	</div>
+</div>
+
+</div>	
+   		
+		</main><!-- .site-main -->
+	</div><!-- .content-area -->
+
+
+
+		</div><!-- .site-content -->
+</div><!-- .site-inner -->
+		
+			<!-- .site-info -->
+		</footer><!-- .site-footer -->
+	
+</div><!-- .site -->
+
+<script type='text/javascript' src='http://pagang.mitti.se/wp-content/themes/pagang/js/skip-link-focus-fix.js?ver=20151112'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var screenReaderText = {"expand":"expandera undermeny","collapse":"minimera undermeny"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://pagang.mitti.se/wp-content/themes/pagang/js/functions.js?ver=20151204'></script>
+<script type='text/javascript' src='http://pagang.mitti.se/wp-includes/js/wp-embed.min.js?ver=4.4.2'></script>
+</body>
+</html>
