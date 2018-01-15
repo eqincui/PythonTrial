@@ -17,6 +17,6 @@ class CoolscrapyPipeline(object):
 
         line = [item['title'], item['location'], item['link'], item['time']]  # 把数据中每一项整理出来
         self.ws.append(line)  # 将数据以行的形式添加到xlsx中
-        self.wb.save('C:/Python27/examples/PythonTrial/test-Scrapy/mitti.xlsx')  # 保存xlsx文件
+        self.wb.save('C:/Python27/examples/PythonTrial/test-Scrapy-Excel/mitti.xlsx')  # 保存xlsx文件
 
         return item

@@ -6,9 +6,10 @@ Desc :
 """
 from coolscrapy.items import MittiItem
 import scrapy
+import sys
 
 class MittiSpider(scrapy.Spider):
-    name = "AAAmitti"
+    name = "mitti"
     allowed_domains = ["http://pagang.mitti.se/"]
     start_urls = [
         "http://pagang.mitti.se"
@@ -35,8 +36,8 @@ class MittiSpider(scrapy.Spider):
        for sel in response.xpath('//div[@class="innerContentContainer"]'):
          ##print sel
 
-         item['title'] = sel.xpath('.//div[@class="listTitle"]/text()').extract()
-         print(item['title'])
+         item['title'] = sel.xpath('.//div[@class="listTitle"]/text()')[0].extract().strip()
+         print(item['title'].encode(sys.stdout.encoding, errors='replace'))
 
          ##item['link'] = sel.xpath('a[2]')
          #item['link'] = sel.xpath('a[contains(@href, "http")]')
@@ -49,6 +50,8 @@ class MittiSpider(scrapy.Spider):
          item['time'] = sel.xpath('.//div[@class="listLocationDate"]/text()')[4].extract().strip()
          print(item['time'])
          print('\n')
+
+         yield item
 
 
        next_page = response.xpath('//a[contains(@href, "http://pagang.mitti.se/page/")][last()]/@href').extract()
